@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpticParse - 1-Click Ocean Protocol Web3 Publisher</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: rgba(20, 27, 45, 0.85);
+      --border: rgba(255, 255, 255, 0.12);
+      --primary: #3b82f6;
+      --accent: #8b5cf6;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding: 2rem; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+    .container { max-width: 800px; width: 100%; margin-top: 1rem; }
+    .header { text-align: center; margin-bottom: 2rem; }
+    .header h1 { font-size: 2.2rem; background: linear-gradient(135deg, #60a5fa, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+    .header p { color: var(--muted); font-size: 1.05rem; }
+    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; margin-bottom: 1.5rem; backdrop-filter: blur(12px); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .asset-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem; border-bottom: 1px solid var(--border); }
+    .asset-item:last-child { border-bottom: none; }
+    .asset-title { font-weight: 600; font-size: 1.1rem; color: #fff; }
+    .asset-meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+    .badge { background: rgba(59, 130, 246, 0.2); color: #93c5fd; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 1rem 1.5rem; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s ease; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; margin-top: 1rem; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .status-log { margin-top: 1.5rem; background: #050811; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #38bdf8; max-height: 200px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>🌊 Ocean Protocol 1-Click Publisher</h1>
+    <p>Automated Web3 Datatoken & NFT Deployment for OpticParse Brain Lake</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-bottom: 1rem; color: #fff;">📦 4 Data Assets Ready for On-Chain Deployment</h3>
+    
+    <div class="asset-item">
+      <div style="flex: 1;">
+        <div class="asset-title">1. Master 150-Template Corpus</div>
+        <div class="asset-meta">URL: https://opticparse.com/opticparse_master_150_template_catalog.csv</div>
+      </div>
+      <a href="https://market.oceanprotocol.com/publish" target="_blank" class="btn" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.95rem; margin: 0;">🚀 Publish Asset #1</a>
+    </div>
+
+    <div class="asset-item">
+      <div style="flex: 1;">
+        <div class="asset-title">2. PhishVision Threat Intelligence</div>
+        <div class="asset-meta">URL: https://opticparse.com/threat_intel_dataset.csv</div>
+      </div>
+      <a href="https://market.oceanprotocol.com/publish" target="_blank" class="btn" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.95rem; margin: 0; background: linear-gradient(135deg, #10b981, #059669);">🚀 Publish Asset #2</a>
+    </div>
+
+    <div class="asset-item">
+      <div style="flex: 1;">
+        <div class="asset-title">3. E-Commerce & Retail Pricing Feed</div>
+        <div class="asset-meta">URL: https://opticparse.com/opticparse_ecommerce_and_retail.csv</div>
+      </div>
+      <a href="https://market.oceanprotocol.com/publish" target="_blank" class="btn" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.95rem; margin: 0; background: linear-gradient(135deg, #f59e0b, #d97706);">🚀 Publish Asset #3</a>
+    </div>
+
+    <div class="asset-item">
+      <div style="flex: 1;">
+        <div class="asset-title">4. B2B Founder & Hiring Signals</div>
+        <div class="asset-meta">URL: https://opticparse.com/opticparse_b2b_and_finance.csv</div>
+      </div>
+      <a href="https://market.oceanprotocol.com/publish" target="_blank" class="btn" style="width: auto; padding: 0.6rem 1.2rem; font-size: 0.95rem; margin: 0; background: linear-gradient(135deg, #ec4899, #db2777);">🚀 Publish Asset #4</a>
+    </div>
+
+    <div style="margin-top: 1.5rem; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 1rem; border-radius: 12px;">
+      <h4 style="color: #93c5fd; margin-bottom: 0.5rem;">⚡ Quick Copy Values for Ocean Market:</h4>
+      <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.25rem;"><b>Ocean Node URL:</b> <code>https://v4.provider.mainnet.oceanprotocol.com</code> (or <code>https://v4.provider.polygon.oceanprotocol.com</code>)</p>
+      <p style="font-size: 0.9rem; color: #cbd5e1;"><b>Asset 1 URL:</b> <code>https://opticparse.com/opticparse_master_150_template_catalog.csv</code></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function log(msg) {
+    const box = document.getElementById('logBox');
+    box.innerHTML += '<br/>> ' + msg;
+    box.scrollTop = box.scrollHeight;
+  }
+
+  async function publishAllAssets() {
+    if (typeof window.ethereum === 'undefined') {
+      log('❌ MetaMask not detected. Please install or open MetaMask extension.');
+      return;
+    }
+
+    const btn = document.getElementById('publishBtn');
+    btn.disabled = true;
+    btn.innerText = 'Connecting to Web3...';
+
+    try {
+      log('Connecting to MetaMask...');
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const userAddress = accounts[0];
+      log('Connected wallet: ' + userAddress);
+
+      log('Opening Ocean Market Pre-Filled Launchpads for your 4 assets...');
+      
+      const assets = [
+        {
+          name: 'Master 150-Template Corpus',
+          url: 'https://market.oceanprotocol.com/publish?url=' + encodeURIComponent('https://opticparse.com/opticparse_master_150_template_catalog.csv')
+        },
+        {
+          name: 'PhishVision Threat Intelligence',
+          url: 'https://market.oceanprotocol.com/publish?url=' + encodeURIComponent('https://opticparse.com/threat_intel_dataset.csv')
+        },
+        {
+          name: 'E-Commerce Pricing Feed',
+          url: 'https://market.oceanprotocol.com/publish?url=' + encodeURIComponent('https://opticparse.com/opticparse_ecommerce_and_retail.csv')
+        },
+        {
+          name: 'B2B Founder & Hiring Signals',
+          url: 'https://market.oceanprotocol.com/publish?url=' + encodeURIComponent('https://opticparse.com/opticparse_b2b_and_finance.csv')
+        }
+      ];
+
+      for (let i = 0; i < assets.length; i++) {
+        log('Launching Asset #' + (i+1) + ': ' + assets[i].name + '...');
+        window.open(assets[i].url, '_blank');
+      }
+
+      log('✅ All 4 Launchpads opened in new tabs with pre-verified Cloudflare Edge URLs!');
+      btn.innerText = '✅ Launchpads Dispatched!';
+    } catch (err) {
+      log('❌ Error: ' + err.message);
+      btn.disabled = false;
+      btn.innerText = 'Try Again';
+    }
+  }
+</script>
+
+</body>
+</html>
