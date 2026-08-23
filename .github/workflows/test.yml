@@ -1,0 +1,36 @@
+name: Python SDK Tests & Quality Matrix
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test Python SDK (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install SDK & Test Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ./opticparse-py
+          pip install pytest
+
+      - name: Run Test Suite
+        run: |
+          pytest opticparse-py/tests/ -v

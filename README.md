@@ -4,6 +4,7 @@
 
   <p>
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Website"></a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/actions/workflows/test.yml"><img src="https://img.shields.io/badge/Tests-Passing-brightgreen?style=flat-square&logo=githubactions&logoColor=white" alt="Tests"></a>
     <a href="https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark"><img src="https://img.shields.io/badge/Kaggle_Audit-100%25_Verified-20BEFF?style=flat-square&logo=kaggle&logoColor=white" alt="Kaggle Benchmark"></a>
     <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Master_Corpus-yellow?style=flat-square&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
     <a href="https://pypi.org/project/opticparse-py/"><img src="https://img.shields.io/pypi/v/opticparse-py.svg?style=flat-square" alt="PyPI version"></a>
@@ -13,6 +14,7 @@
     <a href="https://opticparse.com/api-docs.html"><b>📖 Live API Docs</b></a> •
     <a href="https://opticparse.com/threat-db/"><b>🛡️ Threat Intelligence DB</b></a> •
     <a href="TEMPLATES.md"><b>📚 150 Extraction Templates</b></a> •
+    <a href="INSIGHTS.md"><b>📊 Live Insights</b></a> •
     <a href="https://rapidapi.com/studio/"><b>⚡ RapidAPI Hub</b></a>
   </p>
 </div>
@@ -214,6 +216,7 @@ Explore real-time visual safety evaluations and impersonation forensics:
 We welcome contributions to SDKs, MCP adapters, and extraction templates!
 * Read our [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 * Review our [SECURITY.md](SECURITY.md) for responsible disclosure.
+* Track development milestones in [INSIGHTS.md](INSIGHTS.md) and [ROADMAP.md](ROADMAP.md).
 
 ---
 
