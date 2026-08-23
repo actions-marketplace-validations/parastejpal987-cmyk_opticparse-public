@@ -4,13 +4,42 @@ build-backend = "hatchling.build"
 
 [project]
 name = "opticparse-py"
-version = "0.1.0"
-description = "Official Python SDK for the OpticParse AI Web Scraper and PhishVision API"
+version = "1.0.0"
+description = "Official Python SDK for the OpticParse AI Web Scraper, 150 Enterprise Extraction Templates, and PhishVision Threat Detection"
 readme = "README.md"
-requires-python = ">=3.8"
-dependencies = [
-    "httpx>=0.24.0",
+authors = [
+    { name = "Paras Tejpal", email = "paras@opticparse.com" }
 ]
+requires-python = ">=3.8"
+dependencies = []
+keywords = [
+    "web-scraping",
+    "ai-vision",
+    "phishing-detection",
+    "threat-intelligence",
+    "mcp",
+    "model-context-protocol",
+    "playwright"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Security"
+]
+
+[project.urls]
+Homepage = "https://opticparse.com"
+Documentation = "https://opticparse.com/api-docs.html"
+Repository = "https://github.com/parastejpal987-cmyk/opticparse-public"
+"Bug Tracker" = "https://github.com/parastejpal987-cmyk/opticparse-public/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/opticparse"]
