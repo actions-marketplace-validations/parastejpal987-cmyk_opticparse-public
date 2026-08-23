@@ -1,0 +1,18 @@
+{
+  "status": "CONTINUOUS_HARVESTING_ACTIVE",
+  "active_pipelines": 150,
+  "sync_frequency": "Every 15 minutes (24/7 Autopilot)",
+  "daily_ingestion_velocity": "+1,250 records/day",
+  "storage_architecture": {
+    "lake": "Cloudflare R2 (Permanent - Zero Expiration)",
+    "memory": "Cloudflare Vectorize (Multimodal AI Embeddings)",
+    "storefront": "Cloudflare KV (7-Day Rolling Window)"
+  },
+  "datasets_available": [
+    "https://opticparse.com/opticparse_master_150_template_catalog.csv",
+    "https://opticparse.com/threat_intel_dataset.csv",
+    "https://opticparse.com/opticparse_ecommerce_and_retail.csv",
+    "https://opticparse.com/opticparse_b2b_and_finance.csv"
+  ],
+  "last_github_sync_utc": "2026-08-23T16:56:00Z"
+}
