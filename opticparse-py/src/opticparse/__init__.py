@@ -1,3 +1,27 @@
-from .client import OpticParse
+"""
+OpticParse Python SDK
+"""
 
-__all__ = ["OpticParse"]
+from .client import (
+    OpticParse,
+    OpticParseClient,
+    OpticParseError,
+    AuthenticationError,
+    RateLimitError,
+    APIConnectionError,
+    TemplateNotFoundError,
+    ServerError,
+    __version__,
+)
+
+__all__ = [
+    "OpticParse",
+    "OpticParseClient",
+    "OpticParseError",
+    "AuthenticationError",
+    "RateLimitError",
+    "APIConnectionError",
+    "TemplateNotFoundError",
+    "ServerError",
+    "__version__",
+]
