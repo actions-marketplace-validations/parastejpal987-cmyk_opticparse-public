@@ -72,42 +72,37 @@
 
 <div class="legal-content">
   <h1>Privacy Policy</h1>
-  <div class="last-updated">Last updated: July 10, 2026</div>
+  <div class="last-updated">Last updated: August 24, 2026</div>
 
   <h2>1. INTRODUCTION</h2>
-  <p>OpticParse Technologies ("we", "us", "our") operates the OpticParse and PhishVision API platforms. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
+  <p>OpticParse Technologies ("we", "us", "our") operates the OpticParse Vision AI and PhishVision cybersecurity platforms across Cloudflare Edge and global compute infrastructure. This Privacy Policy explains how we collect, process, cache, and safeguard your data.</p>
 
   <h2>2. INFORMATION WE COLLECT</h2>
   <ul>
-    <li>Email address (for account creation)</li>
-    <li>API usage logs (request count, timestamps, endpoint called)</li>
-    <li>API keys (hashed, never stored in plain text)</li>
-    <li>Payment information (processed by LemonSqueezy, we never see your card details)</li>
+    <li>Account credentials (Email and cryptographically salted password hashes via Supabase Auth)</li>
+    <li>Two-Factor Authentication (TOTP secret keys generated and stored in encrypted vault state)</li>
+    <li>Developer API keys (SHA-256 hashed, never stored in plaintext)</li>
+    <li>API telemetry &amp; execution metrics (tokens consumed, extraction latency, endpoint invocations)</li>
+    <li>Payment information (Handled strictly via Lemon Squeezy with zero raw credit card retention on our servers)</li>
   </ul>
 
-  <h2>3. HOW WE USE YOUR INFORMATION</h2>
+  <h2>3. COOKIES, LOCALSTORAGE &amp; EDGE CACHING</h2>
+  <p>We use essential cookies and browser LocalStorage strictly for:</p>
   <ul>
-    <li>To provide and maintain our API services</li>
-    <li>To track usage against your plan limits</li>
-    <li>To send important service updates</li>
-    <li>We never sell your data to third parties</li>
-    <li>We never use your data for advertising</li>
+    <li>Maintaining your authenticated session across dashboard route transitions</li>
+    <li>Storing your active API token securely on client machines</li>
+    <li>Edge-caching scrape schema templates and benchmark payloads for sub-50ms performance</li>
   </ul>
+  <p>You can clear or decline non-essential cookies at any time via the cookie banner or your browser preferences.</p>
 
-  <h2>4. DATA STORAGE</h2>
-  <p>Your data is stored securely on Supabase (PostgreSQL database) hosted on AWS infrastructure in Singapore. We use Row Level Security to ensure you can only access your own data.</p>
+  <h2>4. URLS &amp; DATA PROCESSED</h2>
+  <p>When you submit target URLs for vision extraction or threat scanning, payloads are processed in stateless volatile memory at edge nodes. Extracted JSON artifacts belong exclusively to you and are not retained beyond your configured data retention and task cache intervals.</p>
 
-  <h2>5. URLS YOU SUBMIT</h2>
-  <p>When you use OpticParse or PhishVision, you submit URLs for processing. We do not store the content of pages we visit on your behalf beyond the immediate processing time needed to return results.</p>
+  <h2>5. DATA RETENTION &amp; DELETION RIGHTS (GDPR / CCPA)</h2>
+  <p>Under GDPR and CCPA, you retain full rights to export your structured datasets or request permanent account and telemetry purging. You can trigger account deletion directly from the Profile Settings tab or by contacting privacy@opticparse.com.</p>
 
-  <h2>6. COOKIES</h2>
-  <p>We use minimal session cookies for authentication only. We do not use tracking or advertising cookies.</p>
-
-  <h2>7. YOUR RIGHTS</h2>
-  <p>You can request deletion of your account and all associated data at any time by emailing us.</p>
-
-  <h2>8. CONTACT</h2>
-  <p>For privacy questions: support@opticparse.com<br>
+  <h2>6. CONTACT &amp; DATA CONTROLLER</h2>
+  <p>For data privacy inquiries: support@opticparse.com<br>
   Company: OpticParse Technologies<br>
   Location: Punjab, India</p>
 </div>

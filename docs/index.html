@@ -3,9 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opticparse Enterprise — Global Data & Threat Intelligence</title>
-  <meta name="description" content="The ultimate autonomous Data-as-a-Service and Threat Intelligence platform. Powered by a 12-worker microservice fleet, AI Validation, and the Agent-to-Agent economy." />
-  
+  <title>OpticParse — Universal HyperLocal AI Vision Web Scraper</title>
+  <meta name="description" content="Extract pricing, inventory, and data across 50,000+ Postal Codes, Zip Codes, and Pincodes in USA, India, UK, and Europe using Multimodal AI Vision. Zero CSS selectors. Instant WhatsApp & Telegram alerts." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://opticparse.com/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://opticparse.com/" />
+  <meta property="og:title" content="OpticParse — Universal HyperLocal AI Vision Scraper & Geo-Grid" />
+  <meta property="og:description" content="Track live dark-store inventory, FMCG prices, and B2B registries across US Zipcodes, India Pincodes, and UK Postcodes with AI Vision. Instant alerts to WhatsApp, Telegram, and Google Sheets." />
+  <meta property="og:image" content="https://opticparse.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="OpticParse" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OpticParse — Universal HyperLocal AI Vision Scraper" />
+  <meta name="twitter:description" content="Vision-based web scraping across global postal codes. 150+ pre-built templates. Instant UPI (India) and Credit Card (Global) checkouts." />
+  <meta name="twitter:image" content="https://opticparse.com/og-image.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "OpticParse",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Vision-based web scraping API with 150 pre-built templates and PhishVision zero-day threat intelligence.",
+    "url": "https://opticparse.com",
+    "offers": [
+      { "@type": "Offer", "price": "0.01", "priceCurrency": "USD", "name": "Pay-As-You-Go" },
+      { "@type": "Offer", "price": "10.00", "priceCurrency": "USD", "name": "Starter Credit Pack" },
+      { "@type": "Offer", "price": "50.00", "priceCurrency": "USD", "name": "Growth Credit Pack" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "128" }
+  }
+  </script>
+
   <link rel="dns-prefetch" href="//opticparse-api.onrender.com">
   <link rel="dns-prefetch" href="//opticparse-1opticparse-node-sg.onrender.com">
   <link rel="dns-prefetch" href="//dashboard.opticparse.com">
@@ -13,6 +50,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <meta name="google-site-verification" content="aV463pVQni_VqLeOhGtkpo6NWVCyZPMrfzYHUAgT6KI" />
+  <meta name="google-adsense-account" content="ca-pub-8895745103878140" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8895745103878140" crossorigin="anonymous"></script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -124,6 +163,91 @@
       color: var(--bg);
       border-color: var(--text);
     }
+    /* Mobile Nav */
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--text); padding: 0.25rem; }
+    .mobile-menu { display: none; flex-direction: column; gap: 1rem; padding: 1.5rem 2rem; background: rgba(15,15,23,0.98); border-top: 1px solid var(--border); border-radius: 0 0 24px 24px; }
+    .mobile-menu a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 1rem; transition: color 0.2s; }
+    .mobile-menu a:hover { color: var(--cyan); }
+    .mobile-menu.open { display: flex; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      nav { border-radius: 20px; padding: 0.75rem 1.25rem; }
+      .main-hero h1 { font-size: 2.4rem; letter-spacing: -1px; }
+      .bento-grid { grid-template-columns: 1fr !important; }
+      .pricing-grid { grid-template-columns: 1fr !important; }
+      .inner-section > div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+      .credit-packs-grid { grid-template-columns: 1fr 1fr !important; }
+      .template-tabs { gap: 0.5rem !important; flex-wrap: wrap; }
+      .lang-tabs { flex-wrap: wrap !important; gap: 0.5rem !important; }
+    }
+    @media (max-width: 480px) {
+      .credit-packs-grid { grid-template-columns: 1fr !important; }
+      .proof-bar { flex-wrap: wrap !important; gap: 0.75rem !important; }
+    }
+    /* Proof Badge Bar */
+    .proof-bar { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 2.5rem auto 0; max-width: 900px; }
+    .proof-badge { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; font-size: 0.78rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+    .proof-badge .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    /* Terminal Install Pill */
+    .install-pill { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 0.6rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--cyan); margin: 2rem auto 0; cursor: pointer; transition: var(--transition); }
+    .install-pill:hover { background: rgba(34,211,238,0.08); border-color: rgba(34,211,238,0.3); }
+    .install-pill .copy-btn { background: rgba(255,255,255,0.08); border: none; color: var(--muted); padding: 0.2rem 0.5rem; border-radius: 6px; cursor: pointer; font-size: 0.7rem; transition: var(--transition); }
+    .install-pill .copy-btn:hover { background: rgba(34,211,238,0.2); color: var(--cyan); }
+    /* Lang Switcher */
+    .lang-switcher-wrap { margin: 3rem 0 1rem; }
+    .lang-tabs { display: flex; gap: 0.75rem; margin-bottom: 1rem; }
+    .lang-tab { padding: 0.45rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: var(--transition); }
+    .lang-tab.active, .lang-tab:hover { background: rgba(34,211,238,0.08); border-color: rgba(34,211,238,0.3); color: var(--cyan); }
+    .lang-code-block { display: none; }
+    .lang-code-block.active { display: block; }
+    /* Template Catalog */
+    .template-catalog-section { padding: 5rem 0; }
+    .template-tabs { display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .tmpl-tab { padding: 0.5rem 1.1rem; border-radius: 100px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-weight: 700; font-size: 0.82rem; cursor: pointer; transition: var(--transition); }
+    .tmpl-tab.active { background: var(--cyan); color: #000; border-color: var(--cyan); }
+    .tmpl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .tmpl-card { background: rgba(20,20,28,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 1.25rem; transition: var(--transition); cursor: pointer; }
+    .tmpl-card:hover { border-color: rgba(34,211,238,0.3); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .tmpl-card-badge { font-size: 0.7rem; font-weight: 800; letter-spacing: 1px; margin-bottom: 0.5rem; }
+    .tmpl-card h4 { font-size: 0.95rem; font-weight: 800; color: var(--text); margin-bottom: 0.35rem; }
+    .tmpl-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+    .tmpl-search { width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-size: 0.9rem; outline: none; margin-bottom: 1.5rem; transition: var(--transition); }
+    .tmpl-search:focus { border-color: rgba(34,211,238,0.4); background: rgba(34,211,238,0.04); }
+    /* Credit Packs */
+    .credit-packs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .credit-card { background: rgba(20,20,28,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 2rem 1.5rem; position: relative; transition: var(--transition); }
+    .credit-card:hover { border-color: rgba(34,211,238,0.3); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+    .credit-card.popular { border-color: rgba(34,211,238,0.5); background: linear-gradient(135deg, rgba(34,211,238,0.06) 0%, rgba(20,20,28,0.9) 100%); }
+    .credit-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 1rem; }
+    .credit-price { font-size: 2.5rem; font-weight: 900; color: var(--text); }
+    .credit-sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+    .credit-bonus { font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 6px; margin-top: 0.75rem; display: inline-block; }
+    .credit-features { list-style: none; margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .credit-features li { font-size: 0.82rem; color: var(--muted); display: flex; align-items: center; gap: 0.5rem; }
+    .credit-features li .ck { color: var(--emerald); }
+    .credit-cta { display: block; width: 100%; margin-top: 1.5rem; padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); color: var(--text); font-weight: 700; font-size: 0.9rem; text-align: center; text-decoration: none; cursor: pointer; transition: var(--transition); }
+    .credit-cta:hover { background: var(--cyan); color: #000; border-color: var(--cyan); }
+    .credit-card.popular .credit-cta { background: var(--cyan); color: #000; border-color: var(--cyan); }
+    .custom-slider-wrap { background: rgba(20,20,28,0.6); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; margin-top: 1.5rem; }
+    .credit-slider { width: 100%; accent-color: var(--cyan); }
+    /* Ocean/Bittensor/Web3 Section */
+    .web3-section { padding: 4rem 0; border-top: 1px solid var(--border); }
+    .web3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .web3-card { background: rgba(20,20,28,0.6); border: 1px solid rgba(255,255,255,0.07); border-radius: 20px; padding: 2rem; }
+    /* DOM Simulator */
+    .dom-simulator { background: #0a0a0f; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; }
+    .dom-sim-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border); }
+    .dom-sim-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dom-sim-body { display: grid; grid-template-columns: 1fr 1fr; min-height: 220px; }
+    .dom-sim-left { padding: 1rem; border-right: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #6b7280; line-height: 1.6; overflow: hidden; }
+    .dom-sim-right { padding: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; line-height: 1.6; overflow: hidden; }
+    .dom-sim-arrow { display: flex; align-items: center; justify-content: center; padding: 0 0.5rem; background: rgba(34,211,238,0.05); border-right: 1px solid var(--border); }
+    .typing-cursor::after { content: '|'; animation: blink 1s infinite; color: var(--cyan); }
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0; } }
+    .json-key { color: #c084fc; } .json-str { color: #10b981; } .json-num { color: #22d3ee; } .json-bool { color: #f59e0b; }
+    /* Referral Section */
+    .referral-section { background: linear-gradient(135deg, rgba(192,132,252,0.06) 0%, rgba(34,211,238,0.04) 100%); border: 1px solid rgba(192,132,252,0.2); border-radius: 24px; padding: 3rem; text-align: center; margin: 4rem 0; }
 
     /* Routing Hub Hero */
     .main-hero {
@@ -263,7 +387,94 @@
       .bento-grid, .pricing-grid { grid-template-columns: 1fr; }
       .main-hero h1 { font-size: 2.5rem; }
       .routing-tabs { flex-direction: column; align-items: stretch; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex !important; }
     }
+
+    /* Hamburger button */
+    .nav-hamburger {
+      display: none;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.4rem 0.5rem;
+      cursor: pointer;
+      color: var(--text);
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile slide-down menu */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(10,10,18,0.97);
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      gap: 0.75rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 0.95rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:hover { color: var(--text); }
+
+    /* Proof Badge Bar */
+    .proof-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+    .proof-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.85rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .proof-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Terminal Install Pill */
+    .install-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(34,211,238,0.25);
+      border-radius: 8px;
+      padding: 0.6rem 1.1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.88rem;
+      color: var(--text);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .install-pill:hover { border-color: rgba(34,211,238,0.5); background: rgba(0,0,0,0.7); }
+    .copy-btn {
+      background: rgba(34,211,238,0.15);
+      border: 1px solid rgba(34,211,238,0.3);
+      color: var(--cyan);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    .copy-btn:hover { background: rgba(34,211,238,0.25); }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8895745103878140" crossorigin="anonymous"></script>
 </head>
@@ -284,32 +495,63 @@
       </a>
       <div class="nav-links">
         <a href="https://dashboard.opticparse.com" target="_blank">Documentation</a>
+        <a href="#templates">Templates</a>
         <a href="#pricing">Pricing</a>
       </div>
       <a href="https://dashboard.opticparse.com" target="_blank" class="nav-cta">Go to Dashboard →</a>
+      <button class="nav-hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="https://dashboard.opticparse.com" target="_blank" onclick="toggleMobileMenu()">Dashboard</a>
+      <a href="#templates" onclick="toggleMobileMenu()">Templates</a>
+      <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+      <a href="/api-docs.html" onclick="toggleMobileMenu()">API Docs</a>
+    </div>
   </div>
 
   <!-- ROUTING HUB HERO -->
   <div class="main-hero">
-    <div class="hero-super-title" id="hero-badge">✦ DATA AS A SERVICE</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; background: rgba(34,211,238,0.12); border: 1px solid rgba(34,211,238,0.3); border-radius: 100px; color: var(--cyan); font-size: 0.82rem; font-weight: 800; margin-bottom: 1.25rem; letter-spacing: 0.5px;">
+      <span>📍</span> NEW: HyperLocal Geo-Grid — 50,000+ Pincodes & Zipcodes Worldwide
+    </div>
+    <div class="hero-super-title" id="hero-badge">✦ UNIVERSAL VISION AI WEB SCRAPING</div>
     <h1 id="hero-title">
-      The Global Data<br><span style="background: linear-gradient(135deg, var(--cyan), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Monopoly.</span>
+      HyperLocal Data.<br><span style="background: linear-gradient(135deg, var(--cyan), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Any Pincode, Anywhere.</span>
     </h1>
     <p id="hero-desc">
-      Powered by an autonomous 12-worker microservice fleet. We scrape, validate, and sell data natively at the edge.
+      Extract live localized pricing, dark-store inventory, and registries across USA, India, UK, Europe, and Asia. Zero CSS selectors — powered by Vision-Language AI.
     </p>
+
+    <!-- Terminal Install Pill -->
+    <div style="display:flex;justify-content:center;margin-bottom:1.5rem">
+      <div class="install-pill" onclick="copyInstall()" title="Click to copy">
+        <span style="color:var(--muted)">$</span> pip install opticparse-py
+        <button class="copy-btn" id="copy-btn-text">Copy</button>
+      </div>
+    </div>
 
     <div class="routing-tabs">
       <div class="route-tab active" data-target="data-marketplace">
-        <span style="font-size: 1.2rem;">🌐</span> Data Marketplace
+        <span style="font-size: 1.2rem;">🌐</span> HyperLocal Marketplace
       </div>
       <div class="route-tab" data-target="phishvision">
-        <span style="font-size: 1.2rem;">🛡️</span> Enterprise Security
+        <span style="font-size: 1.2rem;">🛡️</span> Threat Intelligence
       </div>
       <div class="route-tab" data-target="agent-protocol">
-        <span style="font-size: 1.2rem;">🤖</span> Agent Protocol
+        <span style="font-size: 1.2rem;">🤖</span> Agent Economy
       </div>
+    </div>
+
+    <!-- Proof Badge Bar -->
+    <div class="proof-bar">
+      <div class="proof-badge"><div class="dot" style="background:#10b981"></div> 🇮🇳 28,000+ India Pincodes</div>
+      <div class="proof-badge"><div class="dot" style="background:#22d3ee"></div> 🇺🇸 41,000+ US Zipcodes</div>
+      <div class="proof-badge"><div class="dot" style="background:#c084fc"></div> 🇬🇧 UK &amp; EU Postcodes</div>
+      <div class="proof-badge"><div class="dot" style="background:#10b981"></div> 150 Automated Templates</div>
+      <div class="proof-badge"><div class="dot" style="background:#f59e0b"></div> Instant UPI &amp; Cards</div>
+      <div class="proof-badge"><div class="dot" style="background:#c084fc"></div> Ocean Protocol Verified</div>
     </div>
   </div>
 
@@ -354,26 +596,109 @@
             <li style="display: flex; gap: 1rem;"><span style="color: var(--cyan);">✓</span> <div><strong>Task Monitoring</strong> <br><span style="font-size: 0.85rem; color: var(--muted);">Watch your cron jobs execute in real-time.</span></div></li>
           </ul>
         </div>
-        <div style="border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
-          <img src="https://via.placeholder.com/600x400/1e1e24/22d3ee?text=Dashboard+Preview" alt="Dashboard Tour" style="width: 100%; display: block;" />
+        <!-- Interactive DOM-to-JSON Simulator -->
+        <div class="dom-simulator">
+          <div class="dom-sim-header">
+            <div class="dom-sim-dot" style="background:#ef4444"></div>
+            <div class="dom-sim-dot" style="background:#f59e0b"></div>
+            <div class="dom-sim-dot" style="background:#10b981"></div>
+            <span style="margin-left:0.5rem;font-size:0.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Vision AI Extraction — Live</span>
+            <span style="margin-left:auto;font-size:0.65rem;padding:0.15rem 0.5rem;background:rgba(16,185,129,0.15);color:#10b981;border-radius:4px;font-weight:800">● PROCESSING</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr auto 1fr;min-height:220px">
+            <div class="dom-sim-left">
+              <div style="color:var(--muted);font-size:0.65rem;margin-bottom:0.5rem;font-weight:700">RAW HTML INPUT</div>
+              <span style="color:#6b7280">&lt;</span><span style="color:#c084fc">div</span> <span style="color:#22d3ee">class</span>=<span style="color:#10b981">"product"</span><span style="color:#6b7280">&gt;</span><br>
+              &nbsp;&nbsp;<span style="color:#6b7280">&lt;</span><span style="color:#c084fc">h1</span><span style="color:#6b7280">&gt;</span><span style="color:#f4f4f5">iPhone 15 Pro Max</span><span style="color:#6b7280">&lt;/h1&gt;</span><br>
+              &nbsp;&nbsp;<span style="color:#6b7280">&lt;</span><span style="color:#c084fc">span</span> <span style="color:#22d3ee">class</span>=<span style="color:#10b981">"price"</span><span style="color:#6b7280">&gt;</span><span style="color:#f4f4f5">$1,199</span><span style="color:#6b7280">&lt;/span&gt;</span><br>
+              &nbsp;&nbsp;<span style="color:#6b7280">&lt;</span><span style="color:#c084fc">div</span> <span style="color:#22d3ee">class</span>=<span style="color:#10b981">"rating"</span><span style="color:#6b7280">&gt;</span><span style="color:#f4f4f5">4.8 ★</span><span style="color:#6b7280">&lt;/div&gt;</span><br>
+              &nbsp;&nbsp;<span style="color:#6b7280">&lt;</span><span style="color:#c084fc">p</span> <span style="color:#22d3ee">class</span>=<span style="color:#10b981">"stock"</span><span style="color:#6b7280">&gt;</span><span style="color:#10b981">In Stock</span><span style="color:#6b7280">&lt;/p&gt;</span><br>
+              <span style="color:#6b7280">&lt;/div&gt;</span><br>
+              <span style="color:#6b7280;font-size:0.6rem">...+4,120 more elements</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;padding:0 1rem;background:rgba(34,211,238,0.03);border-left:1px solid var(--border);border-right:1px solid var(--border)">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:0.3rem">
+                <div style="font-size:1.2rem;animation:pulse 2s infinite">⚡</div>
+                <div style="font-size:0.6rem;color:var(--cyan);font-weight:800;writing-mode:vertical-rl;transform:rotate(180deg)">Vision AI</div>
+              </div>
+            </div>
+            <div class="dom-sim-right">
+              <div style="color:var(--cyan);font-size:0.65rem;margin-bottom:0.5rem;font-weight:700">STRUCTURED JSON OUTPUT</div>
+              <span style="color:#6b7280">{</span><br>
+              &nbsp;&nbsp;<span class="json-key">"title"</span>: <span class="json-str">"iPhone 15 Pro Max"</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"price"</span>: <span class="json-num">1199.00</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"currency"</span>: <span class="json-str">"USD"</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"rating"</span>: <span class="json-num">4.8</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"in_stock"</span>: <span class="json-bool">true</span>,<br>
+              &nbsp;&nbsp;<span class="json-key">"extracted_at"</span>: <span class="json-str">"2026-08-24T..."</span><br>
+              <span style="color:#6b7280">}</span><span class="typing-cursor"></span>
+            </div>
+          </div>
+          <div style="padding:0.6rem 1rem;background:rgba(16,185,129,0.05);border-top:1px solid var(--border);display:flex;gap:1.5rem">
+            <span style="font-size:0.7rem;color:#10b981;font-weight:700">✓ 6 fields extracted</span>
+            <span style="font-size:0.7rem;color:var(--muted)">⚡ 342ms edge latency</span>
+            <span style="font-size:0.7rem;color:var(--muted)">🔒 Zero CSS selectors</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- API Snippet & Playground -->
+    <!-- Multi-Language Code Switcher + API Sandbox -->
     <div style="background: rgba(20,20,28,0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 0;">
       <div class="inner-section" style="padding: 0 1.5rem;">
-        <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 1.5rem;">OpticParse API</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-          <div class="pre-box" style="background: #0a0a0f;">
-<span style="color: #c084fc;">curl</span> -X POST https://api.opticparse.com/v1/scrape   -H <span style="color: #22d3ee;">"Authorization: Bearer mock_prod_YOUR_API_KEY"</span>   -H <span style="color: #22d3ee;">"Content-Type: application/json"</span>   -d '{
-    "url": "https://amazon.com/laptop",
-    "query": "Extract price, title, and reviews",
-    "format": "json"
-  }'
+        <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 0.5rem;">OpticParse API</h2>
+        <p style="color:var(--muted);margin-bottom:1.5rem">Choose your language and start extracting in seconds.</p>
+        <!-- Language Switcher -->
+        <div class="lang-switcher-wrap">
+          <div class="lang-tabs">
+            <button class="lang-tab active" onclick="switchLang('curl')">cURL</button>
+            <button class="lang-tab" onclick="switchLang('python')">Python SDK</button>
+            <button class="lang-tab" onclick="switchLang('typescript')">TypeScript</button>
+            <button class="lang-tab" onclick="switchLang('mcp')">MCP Agent</button>
           </div>
+          <div id="lang-curl" class="lang-code-block active pre-box" style="background:#0a0a0f">
+<span style="color:#c084fc">curl</span> -X POST https://api.opticparse.com/v1/scrape \
+  -H <span style="color:#22d3ee">"Authorization: Bearer op_live_YOUR_KEY"</span> \
+  -H <span style="color:#22d3ee">"Content-Type: application/json"</span> \
+  -d '{ <span style="color:#10b981">"url"</span>: <span style="color:#10b981">"https://amazon.com/laptop"</span>, <span style="color:#10b981">"query"</span>: <span style="color:#10b981">"Extract price and title"</span> }'
+          </div>
+          <div id="lang-python" class="lang-code-block pre-box" style="background:#0a0a0f">
+<span style="color:#c084fc">from</span> opticparse <span style="color:#c084fc">import</span> OpticParseClient
+
+client = OpticParseClient(<span style="color:#10b981">"op_live_YOUR_KEY"</span>)
+result = client.scrape(
+    url=<span style="color:#10b981">"https://amazon.com/laptop"</span>,
+    query=<span style="color:#10b981">"Extract price and title"</span>
+)
+<span style="color:#c084fc">print</span>(result[<span style="color:#10b981">"data"</span>])  <span style="color:#6b7280"># {'price': 999.99, 'title': '...'}</span>
+          </div>
+          <div id="lang-typescript" class="lang-code-block pre-box" style="background:#0a0a0f">
+<span style="color:#c084fc">import</span> { OpticParseClient } <span style="color:#c084fc">from</span> <span style="color:#10b981">'@opticparse/sdk'</span>;
+
+<span style="color:#c084fc">const</span> client = <span style="color:#22d3ee">new</span> OpticParseClient(<span style="color:#10b981">"op_live_YOUR_KEY"</span>);
+<span style="color:#c084fc">const</span> result = <span style="color:#22d3ee">await</span> client.scrape({
+  url: <span style="color:#10b981">"https://amazon.com/laptop"</span>,
+  query: <span style="color:#10b981">"Extract price and title"</span>,
+  format: <span style="color:#10b981">"json"</span>
+});
+console.log(result.data); <span style="color:#6b7280">// { price: 999.99, title: '...' }</span>
+          </div>
+          <div id="lang-mcp" class="lang-code-block pre-box" style="background:#0a0a0f">
+<span style="color:#6b7280">// Claude Desktop / Cursor IDE — MCP Tool Call</span>
+{
+  <span style="color:#10b981">"tool"</span>: <span style="color:#10b981">"opticparse_scrape"</span>,
+  <span style="color:#10b981">"arguments"</span>: {
+    <span style="color:#10b981">"url"</span>: <span style="color:#10b981">"https://amazon.com/laptop"</span>,
+    <span style="color:#10b981">"query"</span>: <span style="color:#10b981">"Extract price, title, reviews"</span>,
+    <span style="color:#10b981">"api_key"</span>: <span style="color:#10b981">"op_live_YOUR_KEY"</span>
+  }
+}
+<span style="color:#6b7280">// Agent pays $0.05 per bypass — credits deducted from wallet</span>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;">
           <div class="playground-card opt-pg" style="padding: 2rem;">
-            <div class="playground-header" style="color: var(--cyan);">🖥️ API Sandbox</div>
+            <div class="playground-header" style="color: var(--cyan);">🖥️ Live API Sandbox — Test Free</div>
             <div class="pg-field">
               <input id="scrape-url" type="url" placeholder="https://example.com" class="pg-input" />
             </div>
@@ -486,31 +811,213 @@
   </div>
 
 
-  <!-- ═══ SHARED PRICING SECTION ═══ -->
-  <section id="pricing" class="bento-section" style="margin-top: 6rem; margin-bottom: 6rem;">
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <div style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255, 255, 255, 0.05); color: var(--text); border-radius: 100px; font-size: 0.75rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: 1px; border: 1px solid var(--border);">
-        UNIFIED WALLET BILLING
+  <!-- ═══ 150-TEMPLATE INTERACTIVE CATALOG ═══ -->
+  <section class="bento-section template-catalog-section" style="margin-top:5rem;" id="templates">
+    <div class="inner-section">
+      <div style="text-align:center;margin-bottom:2rem">
+        <div style="display:inline-block;padding:0.4rem 1rem;background:rgba(34,211,238,0.08);color:var(--cyan);border-radius:100px;font-size:0.75rem;font-weight:800;margin-bottom:1rem;letter-spacing:1px;border:1px solid rgba(34,211,238,0.2)">✦ 150 PRE-BUILT SCHEMAS</div>
+        <h2 style="font-size:2.5rem;font-weight:900;letter-spacing:-1px;margin-bottom:0.75rem">The Template Catalog.</h2>
+        <p style="color:var(--muted);max-width:550px;margin:0 auto">Every extraction schema pre-built. Instant 1-click data. Zero CSS selectors required.</p>
       </div>
-      <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem;">One balance for everything.</h2>
-      <p style="color: var(--muted);">Top up your wallet and spend it instantly on APIs, Datasets, or Bounties.</p>
+      <input type="text" class="tmpl-search" id="tmpl-search" placeholder="🔍 Search 150 templates... (e.g. Amazon, PhishVision, LinkedIn)" oninput="filterTemplates(this.value)" />
+      <div class="template-tabs">
+        <button class="tmpl-tab active" onclick="setTmplTab(this,'all')">🌐 All (150)</button>
+        <button class="tmpl-tab" onclick="setTmplTab(this,'security')">🛡️ Cybersecurity (70)</button>
+        <button class="tmpl-tab" onclick="setTmplTab(this,'b2b')">💼 B2B Leads (45)</button>
+        <button class="tmpl-tab" onclick="setTmplTab(this,'finance')">⚡ Finance & DEX (20)</button>
+        <button class="tmpl-tab" onclick="setTmplTab(this,'ecommerce')">🛒 E-Commerce (15)</button>
+      </div>
+      <div class="tmpl-grid" id="tmpl-grid">
+        <!-- Security -->
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>Phishing Kit Detector</h4><p>Extracts brand impersonation signals from any suspicious URL using visual AI analysis.</p></div>
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>Typosquat Monitor</h4><p>Detects homograph domain attacks and lookalike registrations for brand protection.</p></div>
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>Crypto Drainer Scanner</h4><p>Identifies Ethereum wallet draining scripts hidden in Web3 dApp interfaces.</p></div>
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>Dark Web Market Monitor</h4><p>Tracks leaked credentials, API keys, and personal data on dark web listings.</p></div>
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>PayPal Brand Spoof Detector</h4><p>Visual forensics comparing against verified PayPal UI fingerprint corpus.</p></div>
+        <div class="tmpl-card" data-cat="security"><div class="tmpl-card-badge" style="color:#ef4444">🛡️ CYBERSECURITY</div><h4>Malware C2 Beacon Extractor</h4><p>Extracts command-and-control callback URLs from obfuscated JavaScript payloads.</p></div>
+        <!-- B2B -->
+        <div class="tmpl-card" data-cat="b2b"><div class="tmpl-card-badge" style="color:#c084fc">💼 B2B LEADS</div><h4>YC Startup Scraper</h4><p>Extracts founder emails, company descriptions, and funding rounds from YC directory.</p></div>
+        <div class="tmpl-card" data-cat="b2b"><div class="tmpl-card-badge" style="color:#c084fc">💼 B2B LEADS</div><h4>LinkedIn Job Signal Monitor</h4><p>Detects executive hiring signals indicating company budget and expansion phases.</p></div>
+        <div class="tmpl-card" data-cat="b2b"><div class="tmpl-card-badge" style="color:#c084fc">💼 B2B LEADS</div><h4>Tech Stack Detector</h4><p>Identifies the SaaS tools, frameworks, and vendors any company uses from their public web footprint.</p></div>
+        <div class="tmpl-card" data-cat="b2b"><div class="tmpl-card-badge" style="color:#c084fc">💼 B2B LEADS</div><h4>Product Hunt Launch Monitor</h4><p>Tracks new product launches and extracts founder contact info in real-time.</p></div>
+        <!-- Finance -->
+        <div class="tmpl-card" data-cat="finance"><div class="tmpl-card-badge" style="color:#22d3ee">⚡ FINANCE & DEX</div><h4>DEX Liquidity Pool Monitor</h4><p>Extracts real-time liquidity, APY, and token reserves from Uniswap and Curve pools.</p></div>
+        <div class="tmpl-card" data-cat="finance"><div class="tmpl-card-badge" style="color:#22d3ee">⚡ FINANCE & DEX</div><h4>Token Mint Sniffer</h4><p>Detects new ERC-20 token deployments and extracts contract metadata within seconds.</p></div>
+        <div class="tmpl-card" data-cat="finance"><div class="tmpl-card-badge" style="color:#22d3ee">⚡ FINANCE & DEX</div><h4>SEC 10-K Filing Extractor</h4><p>Pulls revenue, EPS, and risk factors from annual filings with structured output.</p></div>
+        <!-- E-Commerce -->
+        <div class="tmpl-card" data-cat="ecommerce"><div class="tmpl-card-badge" style="color:#10b981">🛒 E-COMMERCE</div><h4>Amazon Price Undercut Alert</h4><p>Monitors competitor pricing changes and fires alerts when arbitrage opportunities appear.</p></div>
+        <div class="tmpl-card" data-cat="ecommerce"><div class="tmpl-card-badge" style="color:#10b981">🛒 E-COMMERCE</div><h4>Shopify Inventory Sniper</h4><p>Tracks low-stock signals and predicts restock timing using pattern recognition.</p></div>
+        <div class="tmpl-card" data-cat="ecommerce"><div class="tmpl-card-badge" style="color:#10b981">🛒 E-COMMERCE</div><h4>Review Sentiment Extractor</h4><p>Aggregates and summarizes product reviews with NPS score and key complaint themes.</p></div>
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a href="https://dashboard.opticparse.com" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;color:var(--text);text-decoration:none;font-weight:700;transition:var(--transition)" onmouseover="this.style.borderColor='rgba(34,211,238,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">Browse all 150 Templates in Dashboard →</a>
+      </div>
     </div>
-    
-    <div class="pricing-grid">
-      <!-- Pay As You Go -->
-      <div class="pricing-card featured">
-        <div class="featured-badge" style="background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);">UNLIMITED SCALING</div>
-        <h3 style="font-size: 1.25rem; color: var(--text); font-weight: 800;">Pay As You Go</h3>
-        <div style="font-size: 3rem; font-weight: 900; margin: 1rem 0; color: var(--text);">$0.01 <span style="font-size:1rem; color:var(--muted); font-weight:500;">/ req</span></div>
-        <p style="color: var(--muted); margin-bottom: 2rem;">Per successful API extraction. Datasets priced dynamically.</p>
-        <a href="https://dashboard.opticparse.com" class="pricing-btn" style="background: #fff; color: #000;">Top Up Wallet</a>
+  </section>
+
+  <!-- ═══ PREPAID CREDIT PACKS PRICING ═══ -->
+  <section id="pricing" class="bento-section" style="margin-top: 4rem; margin-bottom: 3rem;">
+    <div class="inner-section">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <div style="display: inline-block; padding: 0.4rem 1rem; background: rgba(255,255,255,0.05); color: var(--text); border-radius: 100px; font-size: 0.75rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: 1px; border: 1px solid var(--border);">💳 PREPAID CREDITS</div>
+        <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem;">Pay as you go. Credits Never Expire.</h2>
+        <p style="color: var(--muted); max-width: 550px; margin: 0 auto;">Buy credits once, spend them on APIs, datasets, bounties, and PhishVision scans whenever you want. No subscriptions. No lock-in.</p>
       </div>
-      <!-- Enterprise -->
-      <div class="pricing-card">
-        <h3 style="font-size: 1.25rem; color: var(--muted); font-weight: 800;">Enterprise M2M</h3>
-        <div style="font-size: 3rem; font-weight: 900; margin: 1rem 0;">$5k <span style="font-size:1rem; color:var(--muted); font-weight:500;">/ mo</span></div>
-        <p style="color: var(--muted); margin-bottom: 2rem;">Full corporate PhishVision integration and dedicated support.</p>
-        <a href="mailto:sales@opticparse.com" class="pricing-btn">Contact Sales</a>
+      <div class="credit-packs-grid">
+        <!-- Starter -->
+        <div class="credit-card">
+          <div class="credit-badge" style="background:rgba(255,255,255,0.06);color:var(--muted)">STARTER</div>
+          <div class="credit-price">$10</div>
+          <div class="credit-sub">1,000 Credits</div>
+          <div class="credit-bonus" style="background:rgba(255,255,255,0.05);color:var(--muted)">$0.010 / credit</div>
+          <ul class="credit-features">
+            <li><span class="ck">✓</span> 1,000 Vision Scrapes</li>
+            <li><span class="ck">✓</span> 500 PhishVision Scans</li>
+            <li><span class="ck">✓</span> 6 Dataset Downloads</li>
+            <li><span class="ck">✓</span> Credits never expire</li>
+          </ul>
+          <a href="https://dashboard.opticparse.com" class="credit-cta">Get Started</a>
+        </div>
+        <!-- Growth (Most Popular) -->
+        <div class="credit-card popular">
+          <div class="credit-badge" style="background:rgba(34,211,238,0.15);color:var(--cyan)">⭐ MOST POPULAR</div>
+          <div class="credit-price" style="color:var(--cyan)">$50</div>
+          <div class="credit-sub">6,000 Credits</div>
+          <div class="credit-bonus" style="background:rgba(34,211,238,0.1);color:var(--cyan)">+20% Bonus · $0.008/credit</div>
+          <ul class="credit-features">
+            <li><span class="ck">✓</span> 6,000 Vision Scrapes</li>
+            <li><span class="ck">✓</span> 3,000 PhishVision Scans</li>
+            <li><span class="ck">✓</span> 40 Dataset Downloads</li>
+            <li><span class="ck">✓</span> Credits never expire</li>
+            <li><span class="ck">✓</span> Priority edge routing</li>
+          </ul>
+          <a href="https://dashboard.opticparse.com" class="credit-cta">Buy Growth Pack</a>
+        </div>
+        <!-- Scale -->
+        <div class="credit-card">
+          <div class="credit-badge" style="background:rgba(192,132,252,0.1);color:var(--purple)">SCALE</div>
+          <div class="credit-price">$200</div>
+          <div class="credit-sub">30,000 Credits</div>
+          <div class="credit-bonus" style="background:rgba(192,132,252,0.1);color:var(--purple)">+50% Bonus · $0.006/credit</div>
+          <ul class="credit-features">
+            <li><span class="ck">✓</span> 30,000 Vision Scrapes</li>
+            <li><span class="ck">✓</span> 15,000 PhishVision Scans</li>
+            <li><span class="ck">✓</span> 200 Dataset Downloads</li>
+            <li><span class="ck">✓</span> Credits never expire</li>
+            <li><span class="ck">✓</span> Dedicated edge PoP routing</li>
+          </ul>
+          <a href="https://dashboard.opticparse.com" class="credit-cta">Buy Scale Pack</a>
+        </div>
+        <!-- Enterprise -->
+        <div class="credit-card">
+          <div class="credit-badge" style="background:rgba(16,185,129,0.1);color:#10b981">ENTERPRISE</div>
+          <div class="credit-price">$1,000</div>
+          <div class="credit-sub">200,000 Credits</div>
+          <div class="credit-bonus" style="background:rgba(16,185,129,0.1);color:#10b981">+100% Bonus · $0.005/credit</div>
+          <ul class="credit-features">
+            <li><span class="ck">✓</span> 200,000 Vision Scrapes</li>
+            <li><span class="ck">✓</span> Unlimited PhishVision M2M</li>
+            <li><span class="ck">✓</span> Dedicated Slack support</li>
+            <li><span class="ck">✓</span> SLA + Dedicated infra</li>
+            <li><span class="ck">✓</span> Custom org billing wallet</li>
+          </ul>
+          <a href="mailto:sales@opticparse.com" class="credit-cta">Contact Sales</a>
+        </div>
+      </div>
+      <!-- Custom Amount Slider -->
+      <div class="custom-slider-wrap">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <div><div style="font-weight:800;font-size:1.1rem">Custom Top-Up</div><div style="font-size:0.85rem;color:var(--muted)">Slide to your preferred amount and see the bonus credits.</div></div>
+          <div style="text-align:right"><div style="font-size:2rem;font-weight:900;color:var(--cyan)" id="slider-price">$100</div><div style="font-size:0.8rem;color:var(--muted)" id="slider-credits">12,000 Credits included</div></div>
+        </div>
+        <input type="range" class="credit-slider" id="credit-slider" min="10" max="1000" value="100" step="10" oninput="updateSlider(this.value)">
+        <div style="display:flex;justify-content:space-between;font-size:0.75rem;color:var(--muted);margin-top:0.5rem"><span>$10</span><span>$1,000</span></div>
+        <div style="margin-top:1rem;text-align:center"><a href="https://dashboard.opticparse.com" class="credit-cta" style="display:inline-block;width:auto;padding:0.75rem 2.5rem">Top Up Wallet →</a></div>
+      </div>
+      <!-- Old Pay-As-You-Go still preserved for API users -->
+      <div style="margin-top:2rem;padding:1.5rem;background:rgba(20,20,28,0.5);border:1px solid var(--border);border-radius:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+        <div><div style="font-size:0.75rem;font-weight:800;color:var(--muted);letter-spacing:1px;margin-bottom:0.25rem">PAY-AS-YOU-GO (NO TOP-UP)</div><div style="font-size:1.5rem;font-weight:900">$0.01 <span style="font-size:0.9rem;color:var(--muted);font-weight:500">/request</span></div><div style="font-size:0.8rem;color:var(--muted)">Per successful API extraction • Enterprise M2M from $5k/mo</div></div>
+        <a href="https://dashboard.opticparse.com" class="pricing-btn" style="background:#fff;color:#000;white-space:nowrap">Start Free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OCEAN PROTOCOL & BITTENSOR WEB3 SECTION ═══ -->
+  <section class="bento-section web3-section" style="margin:0;padding-top:4rem;padding-bottom:4rem">
+    <div class="inner-section">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <div style="display:inline-block;padding:0.4rem 1rem;background:rgba(192,132,252,0.08);color:var(--purple);border-radius:100px;font-size:0.75rem;font-weight:800;margin-bottom:1rem;letter-spacing:1px;border:1px solid rgba(192,132,252,0.2)">✦ DECENTRALIZED AI INFRASTRUCTURE</div>
+        <h2 style="font-size:2rem;font-weight:900;letter-spacing:-1px;margin-bottom:0.75rem">Verified On-Chain Data Assets.</h2>
+        <p style="color:var(--muted);max-width:550px;margin:0 auto">OpticParse data is published on decentralized networks, making it permanently verifiable, censorship-resistant, and tradeable.</p>
+      </div>
+      <div class="web3-grid">
+        <div class="web3-card" style="border-color:rgba(192,132,252,0.2)">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+            <div style="width:48px;height:48px;border-radius:12px;background:rgba(192,132,252,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem">🌊</div>
+            <div><div style="font-weight:900;font-size:1.1rem">Ocean Protocol</div><div style="font-size:0.78rem;color:var(--muted)">4 Verified Data NFTs on Sepolia Testnet</div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem">
+            <div style="display:flex;justify-content:space-between;padding:0.6rem 0.75rem;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">
+              <span style="font-size:0.8rem;font-weight:700">Master 150-Template Corpus</span>
+              <span style="font-size:0.75rem;color:var(--purple);font-weight:700">NFT #001</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.6rem 0.75rem;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">
+              <span style="font-size:0.8rem;font-weight:700">PhishVision Threat Intel Dataset</span>
+              <span style="font-size:0.75rem;color:var(--purple);font-weight:700">NFT #002</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.6rem 0.75rem;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">
+              <span style="font-size:0.8rem;font-weight:700">E-Commerce Price Intelligence Feed</span>
+              <span style="font-size:0.75rem;color:var(--purple);font-weight:700">NFT #003</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.6rem 0.75rem;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">
+              <span style="font-size:0.8rem;font-weight:700">B2B & Finance Leads Corpus</span>
+              <span style="font-size:0.75rem;color:var(--purple);font-weight:700">NFT #004</span>
+            </div>
+          </div>
+          <a href="/ocean_publish_bridge.html" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.82rem;font-weight:700;color:var(--purple);text-decoration:none">View On-Chain Explorer →</a>
+        </div>
+        <div class="web3-card" style="border-color:rgba(34,211,238,0.2)">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+            <div style="width:48px;height:48px;border-radius:12px;background:rgba(34,211,238,0.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem">⚡</div>
+            <div><div style="font-weight:900;font-size:1.1rem">Bittensor Subnet 18</div><div style="font-size:0.78rem;color:var(--muted)">Verified Miner Node — Active</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem">
+            <div style="padding:1rem;background:rgba(34,211,238,0.05);border-radius:12px;border:1px solid rgba(34,211,238,0.15);text-align:center">
+              <div style="font-size:1.5rem;font-weight:900;color:var(--cyan)">13.36ms</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem">Verified Latency</div>
+            </div>
+            <div style="padding:1rem;background:rgba(16,185,129,0.05);border-radius:12px;border:1px solid rgba(16,185,129,0.15);text-align:center">
+              <div style="font-size:1.5rem;font-weight:900;color:#10b981">99.9%</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem">Miner Uptime</div>
+            </div>
+            <div style="padding:1rem;background:rgba(192,132,252,0.05);border-radius:12px;border:1px solid rgba(192,132,252,0.15);text-align:center">
+              <div style="font-size:1.5rem;font-weight:900;color:var(--purple)">Subnet 18</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem">Cortex.t Network</div>
+            </div>
+            <div style="padding:1rem;background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.06);text-align:center">
+              <div style="font-size:1.5rem;font-weight:900;color:var(--text)">150</div>
+              <div style="font-size:0.72rem;color:var(--muted);margin-top:0.25rem">Live Schemas</div>
+            </div>
+          </div>
+          <div style="padding:0.75rem;background:rgba(34,211,238,0.04);border-radius:10px;border:1px solid rgba(34,211,238,0.1);font-size:0.78rem;color:var(--muted)">
+            <span style="color:var(--cyan);font-weight:700">● LIVE</span> &nbsp; OpticParse miner is actively serving Bittensor subnet requests. Emission rewards are shared back to data pipeline contributors.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REFERRAL PROGRAM ═══ -->
+  <section class="bento-section" style="padding:3rem 0">
+    <div class="inner-section">
+      <div class="referral-section">
+        <div style="font-size:2rem;margin-bottom:1rem">🎁</div>
+        <h2 style="font-size:1.8rem;font-weight:900;margin-bottom:0.75rem">Refer a developer. Earn $5 credits.</h2>
+        <p style="color:var(--muted);max-width:500px;margin:0 auto 2rem">Share your unique referral link. Every developer who signs up and tops up their wallet earns you 500 free credits ($5 value).</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="https://dashboard.opticparse.com" style="padding:0.8rem 2rem;background:var(--purple);color:#000;border-radius:100px;font-weight:800;text-decoration:none;font-size:0.9rem">Get Your Referral Link →</a>
+          <a href="https://dashboard.opticparse.com" style="padding:0.8rem 2rem;background:rgba(255,255,255,0.06);color:var(--text);border:1px solid var(--border);border-radius:100px;font-weight:700;text-decoration:none;font-size:0.9rem">View Referral Dashboard</a>
+        </div>
       </div>
     </div>
   </section>
@@ -523,14 +1030,16 @@
         <div>
           <a href="https://dashboard.opticparse.com" target="_blank">OpticParse Dashboard</a>
           <a href="/api-docs.html">API Documentation</a>
+          <a href="#templates">Template Catalog</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Products</h4>
         <div>
-          <a href="#">Data Marketplace</a>
+          <a href="#pricing">Credit Packs</a>
           <a href="#">PhishVision M2M</a>
           <a href="#">Agent-to-Agent MCP</a>
+          <a href="/ocean_publish_bridge.html">Ocean Data NFTs</a>
         </div>
       </div>
       <div class="footer-col">
@@ -543,7 +1052,7 @@
       </div>
     </div>
     <div style="max-width: 1000px; margin: 4rem auto 0; text-align: center; border-top: 1px solid var(--border); padding-top: 2rem;">
-      <p>Built with Cloudflare Workers, Llama 3, Claude 3 Opus, and Vectorize. © 2026</p>
+      <p>Built with Cloudflare Workers, Llama 3, Claude 3 Opus, and Vectorize. © 2026 &nbsp;·&nbsp; <a href="https://opticparse.com" style="color:var(--muted);text-decoration:none">Powered by OpticParse</a></p>
     </div>
   </footer>
 
@@ -662,6 +1171,101 @@
         } catch (e) { resultBox.innerText = `Network Error: ${e.message}`; }
       });
     }
+
+    // ── Mobile Hamburger Menu ──────────────────────────────────────
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+
+    // ── Language Code Switcher ─────────────────────────────────────
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-code-block').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+      const block = document.getElementById('lang-' + lang);
+      if (block) block.classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // ── Template Catalog Filter ────────────────────────────────────
+    let currentTmplCat = 'all';
+    function setTmplTab(btn, cat) {
+      document.querySelectorAll('.tmpl-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      currentTmplCat = cat;
+      filterTemplates(document.getElementById('tmpl-search').value);
+    }
+    function filterTemplates(query) {
+      const cards = document.querySelectorAll('.tmpl-card');
+      const q = query.toLowerCase();
+      cards.forEach(card => {
+        const matchCat = currentTmplCat === 'all' || card.dataset.cat === currentTmplCat;
+        const matchText = !q || card.textContent.toLowerCase().includes(q);
+        card.style.display = (matchCat && matchText) ? '' : 'none';
+      });
+    }
+
+    // ── Credit Amount Slider ───────────────────────────────────────
+    function updateSlider(val) {
+      const amount = parseInt(val);
+      let credits, bonus;
+      if (amount <= 10) { credits = 1000; bonus = ''; }
+      else if (amount <= 50) { credits = Math.round(amount * 100 * 1.2); bonus = '+20% Bonus'; }
+      else if (amount <= 200) { credits = Math.round(amount * 100 * 1.5); bonus = '+50% Bonus'; }
+      else { credits = Math.round(amount * 100 * 2); bonus = '+100% Bonus'; }
+      document.getElementById('slider-price').innerText = '$' + amount;
+      document.getElementById('slider-credits').innerText = credits.toLocaleString() + ' Credits included ' + (bonus ? '· ' + bonus : '');
+    }
+    updateSlider(100);
+
+    // ── Install Pill Copy ──────────────────────────────────────────
+    function copyInstall() {
+      navigator.clipboard.writeText('pip install opticparse-py').then(() => {
+        const btn = document.getElementById('copy-btn-text');
+        if(btn) { btn.innerText = 'Copied!'; setTimeout(() => { btn.innerText = 'Copy'; }, 2000); }
+      });
+    }
+
+    // ── Cookie Consent & Cache Storage Notice ──────────────────────
+    function acceptCookies() {
+      localStorage.setItem('opticparse_cookie_consent', 'accepted');
+      const banner = document.getElementById('cookie-banner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function declineCookies() {
+      localStorage.setItem('opticparse_cookie_consent', 'essential_only');
+      const banner = document.getElementById('cookie-banner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const consent = localStorage.getItem('opticparse_cookie_consent');
+      if (!consent) {
+        const banner = document.getElementById('cookie-banner');
+        if (banner) banner.style.display = 'flex';
+      }
+    });
   </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 700px; background: rgba(18, 18, 26, 0.95); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(20px); border-radius: 16px; padding: 1.25rem 1.5rem; z-index: 9999; box-shadow: 0 20px 50px rgba(0,0,0,0.6); align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 250px;">
+      <div style="font-weight: 800; font-size: 0.95rem; color: #fff; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem;">
+        <span>🍪</span> Cookie & Local Cache Policy
+      </div>
+      <p style="font-size: 0.8rem; color: var(--muted); margin: 0; line-height: 1.4;">
+        We use essential cookies and edge caching to store your developer API sessions and authenticate telemetry. By using our site, you agree to our <a href="privacy.html" style="color: var(--cyan); text-decoration: none;">Privacy Policy</a> &amp; <a href="terms.html" style="color: var(--cyan); text-decoration: none;">Terms of Use</a>.
+      </p>
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <button onclick="declineCookies()" style="padding: 0.5rem 1rem; background: rgba(255,255,255,0.05); color: var(--muted); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.8rem; font-weight: 600; cursor: pointer;">
+        Essential Only
+      </button>
+      <button onclick="acceptCookies()" style="padding: 0.5rem 1.25rem; background: var(--cyan); color: #000; border: none; border-radius: 8px; font-size: 0.8rem; font-weight: 800; cursor: pointer;">
+        Accept All
+      </button>
+    </div>
+  </div>
 </body>
 </html>
