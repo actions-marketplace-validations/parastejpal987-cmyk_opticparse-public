@@ -153,19 +153,28 @@ app = FastAPI(
 # ---------------------------------------------------------------------------
 # Rate Limiting & CORS middleware (registered once, here)
 # ---------------------------------------------------------------------------
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.errors import RateLimitExceeded
-from slowapi.util import get_remote_address
+try:
+    from slowapi import Limiter, _rate_limit_exceeded_handler
+    from slowapi.errors import RateLimitExceeded
+    from slowapi.util import get_remote_address
 
-def get_real_ip(request: Request) -> str:
-    forwarded = request.headers.get("x-forwarded-for")
-    if forwarded:
-        return forwarded.split(",")[0].strip()
-    return get_remote_address(request)
+    def get_real_ip(request: Request) -> str:
+        forwarded = request.headers.get("x-forwarded-for")
+        if forwarded:
+            return forwarded.split(",")[0].strip()
+        return get_remote_address(request)
 
-limiter = Limiter(key_func=get_real_ip)
-app.state.limiter = limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+    limiter = Limiter(key_func=get_real_ip)
+    app.state.limiter = limiter
+    app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+except Exception:
+    class DummyLimiter:
+        def limit(self, *args, **kwargs):
+            def decorator(f):
+                return f
+            return decorator
+    limiter = DummyLimiter()
+    app.state.limiter = limiter
 
 _CORS_ORIGINS = [
     'https://opticparse.com',
@@ -665,12 +674,14 @@ class LoginInfo(BaseModel):
     password: str
     submit_button: str = None
 
+from typing import Optional, List, Dict, Any, Union
+
 class ActionInfo(BaseModel):
     type: str
-    selector: str | None = None
-    value: str | None = None
-    ms: int | None = None
-    key: str | None = None
+    selector: Optional[str] = None
+    value: Optional[str] = None
+    ms: Optional[int] = None
+    key: Optional[str] = None
 
 
 class ScrapeRequest(BaseModel):
@@ -680,11 +691,11 @@ class ScrapeRequest(BaseModel):
     viewport_height: int = 800
     wait_until: str = "load"
     timeout: int = 30000
-    response_schema: dict = None
-    login: LoginInfo = None
-    actions: list[ActionInfo] = None
-    webhook_url: str | None = None
-    proxy_url: str | None = None
+    response_schema: Optional[dict] = None
+    login: Optional[LoginInfo] = None
+    actions: Optional[List[ActionInfo]] = None
+    webhook_url: Optional[str] = None
+    proxy_url: Optional[str] = None
     vision_mode: bool = True
 
 
@@ -747,8 +758,8 @@ class CrawlRequest(BaseModel):
     viewport_height: int = 800
     wait_until: str = "load"
     timeout: int = 30000
-    response_schema: dict = None
-    proxy_url: str | None = None
+    response_schema: Optional[dict] = None
+    proxy_url: Optional[str] = None
     vision_mode: bool = True
 
 
@@ -759,21 +770,21 @@ class WatchRequest(BaseModel):
     viewport_height: int = 800
     wait_until: str = "load"
     timeout: int = 30000
-    response_schema: dict = None
-    proxy_url: str | None = None
+    response_schema: Optional[dict] = None
+    proxy_url: Optional[str] = None
     vision_mode: bool = True
     # Universal HyperLocal & Geo-Routing additions
     country_code: str = "AUTO"
-    postal_code: str | None = None
+    postal_code: Optional[str] = None
     target_currency: str = "ORIGINAL"
     auto_translate: bool = False
     auto_scroll: bool = False
-    template_id: str | None = None
-    schedule_cron: str | None = None
+    template_id: Optional[str] = None
+    schedule_cron: Optional[str] = None
     notify_type: str = "email"
-    notify_target: str | None = None
+    notify_target: Optional[str] = None
     smart_trigger: str = "change"
-    google_sheets_url: str | None = None
+    google_sheets_url: Optional[str] = None
 
 
 class BatchItem(BaseModel):
@@ -783,14 +794,14 @@ class BatchItem(BaseModel):
     viewport_height: int = 800
     wait_until: str = "load"
     timeout: int = 30000
-    response_schema: dict = None
-    login: LoginInfo = None
-    proxy_url: str | None = None
+    response_schema: Optional[dict] = None
+    login: Optional[LoginInfo] = None
+    proxy_url: Optional[str] = None
     vision_mode: bool = True
 
 
 class BatchRequest(BaseModel):
-    requests: list[BatchItem]
+    requests: List[BatchItem]
 
 # ---------------------------------------------------------------------------
 # Unified API key authentication dependency
@@ -1726,7 +1737,7 @@ async def create_watch(request: Request, body: WatchRequest, api_key: str = Depe
 async def get_watch_diff(
     request: Request,
     watch_id: str,
-    proxy_url: str | None = None,
+    proxy_url: Optional[str] = None,
     vision_mode: bool = True,
     api_key: str = Depends(get_api_key)
 ):
