@@ -824,7 +824,7 @@ async def get_api_key(
     # Allows autonomous bots to pay $0.05 per scrape on-chain without user signup
     # -----------------------------------------------------------------------
     payment_tx = request.headers.get("X-Payment-TxHash") or request.headers.get("X-Payment-Proof")
-    treasury_evm = os.getenv("CRYPTO_TREASURY_EVM", "0x58245D8593c6A5408aF00C782c5f18968FE11E26")
+    treasury_evm = os.getenv("CRYPTO_TREASURY_EVM", "0xd458E709e7d54fd3659EF66624A621Cde74EDD27")
     treasury_sol = os.getenv("CRYPTO_TREASURY_SOLANA", "7vW8aD6oV9qN6gqZ5hZ8U9yN3vK1xL7mP2oR4sT6uV8w")
     
     if payment_tx and len(payment_tx) >= 32:

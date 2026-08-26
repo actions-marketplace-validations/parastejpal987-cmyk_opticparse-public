@@ -170,7 +170,7 @@ export default {
             error: "Payment Required: Autonomous AI Agent Micropayment Gateway",
             price_usd: 0.05,
             accepted_protocols: ["evm_usdc", "solana_usdc", "opticparse_api_key"],
-            pay_to_evm: "0x58245D8593c6A5408aF00C782c5f18968FE11E26",
+            pay_to_evm: "0xd458E709e7d54fd3659EF66624A621Cde74EDD27",
             pay_to_solana: "7vW8aD6oV9qN6gqZ5hZ8U9yN3vK1xL7mP2oR4sT6uV8w",
             network: "Polygon / Base / Solana",
             instructions: "Send $0.05 USDC to pay_to address and retry with header: 'X-Payment-TxHash: <transaction_hash>', or use your OpticParse API Key."
@@ -182,7 +182,7 @@ export default {
               "X-Payment-Required": "true",
               "X-Payment-Amount": "0.05",
               "X-Payment-Currency": "USDC",
-              "X-Payment-Address-EVM": "0x58245D8593c6A5408aF00C782c5f18968FE11E26",
+              "X-Payment-Address-EVM": "0xd458E709e7d54fd3659EF66624A621Cde74EDD27",
               "X-Payment-Address-Solana": "7vW8aD6oV9qN6gqZ5hZ8U9yN3vK1xL7mP2oR4sT6uV8w"
             }
           });

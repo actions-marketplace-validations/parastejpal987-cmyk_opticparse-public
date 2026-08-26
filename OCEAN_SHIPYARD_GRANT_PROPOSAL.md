@@ -50,5 +50,6 @@ OpticParse tokenizes its 150-template Brain into **4 distinct Data NFT feeds** o
 
 ## 5. Team & Commitment
 * **Lead Engineer / Founder:** Paras Tejpal
+* **EVM Receiving Wallet Address (Polygon / Ethereum / Oasis):** `0xd458E709e7d54fd3659EF66624A621Cde74EDD27`
 * **Stack:** Cloudflare Workers, Python, Playwright, Computer Vision heuristics, Ocean.py, Web3.js, D1/R2.
 * **Open Source Commitment:** All client SDKs, MCP servers, and GitHub Actions are MIT-licensed at [`parastejpal987-cmyk/opticparse-public`](https://github.com/parastejpal987-cmyk/opticparse-public).
