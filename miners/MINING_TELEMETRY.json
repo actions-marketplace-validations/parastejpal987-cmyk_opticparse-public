@@ -1,0 +1,38 @@
+{
+  "status": "ALL_5_MINERS_ONLINE",
+  "evm_treasury": "0xd458E709e7d54fd3659EF66624A621Cde74EDD27",
+  "uptime_seconds": 10.2,
+  "last_heartbeat": "2026-08-26 14:17:51",
+  "workers": {
+    "nostr_dvm": {
+      "status": "ACTIVE",
+      "jobs_completed": 1,
+      "sats_earned": 250,
+      "asset": "Bitcoin (Lightning Satoshis)"
+    },
+    "masa_network": {
+      "status": "ACTIVE",
+      "verified_pages": 35,
+      "estimated_masa_earned": 4.2,
+      "asset": "$MASA Token"
+    },
+    "ritual_oracle": {
+      "status": "ACTIVE",
+      "oracles_signed": 1,
+      "fees_earned_usd": 1.5,
+      "asset": "ETH / Arbitrum Execution Fees"
+    },
+    "render_compute": {
+      "status": "ACTIVE",
+      "compute_cycles": 1,
+      "tokens_earned": 0.45,
+      "asset": "$IO / $RENDER Compute Tokens"
+    },
+    "grass_depin": {
+      "status": "ACTIVE",
+      "verified_probes": 1,
+      "epoch_points": 15,
+      "asset": "$GRASS Epoch Pool"
+    }
+  }
+}
