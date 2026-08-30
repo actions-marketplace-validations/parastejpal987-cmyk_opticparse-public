@@ -1,0 +1,28 @@
+{
+  "name": "@elizaos/plugin-opticparse",
+  "version": "1.0.0",
+  "description": "ElizaOS Autonomous AI Agent Plugin for Zero-CSS Multimodal Vision Scraping & PhishVision Zero-Day Threat Intelligence",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "elizaos",
+    "plugin",
+    "ai-agent",
+    "web-scraping",
+    "vision-ai",
+    "phishing-detection",
+    "threat-intelligence",
+    "mcp"
+  ],
+  "author": "OpticParse Enterprise <support@opticparse.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@elizaos/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
