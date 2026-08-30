@@ -50,13 +50,19 @@ export default function BillingCard({ usage, tier, user }) {
   }, []);
 
   const handleUpgrade = (pack, inrAmount, usdAmount) => {
-    if (geoContext.isIndia) {
-      setSelectedUpiPack({ pack, inrAmount, usdAmount });
-      setShowUpiModal(true);
-    } else {
-      const url = `${LEMON_CHECKOUT_URL}?checkout[custom][user_id]=${user?.id}&checkout[custom][pack]=${pack}`;
-      window.open(url, '_blank');
-    }
+    // Universal Web3 MetaMask Checkout with Dynamic Regional PPP
+    const finalAmount = geoContext.pppDiscountPct > 0 
+      ? Math.max(5, Math.round(usdAmount * (1 - geoContext.pppDiscountPct / 100))) 
+      : usdAmount;
+    
+    setSelectedCryptoPack({
+      pack,
+      inrAmount,
+      usdAmount: finalAmount,
+      originalUsdAmount: usdAmount,
+      discountPct: geoContext.pppDiscountPct
+    });
+    setShowCryptoModal(true);
   };
 
   useEffect(() => {
@@ -413,16 +419,66 @@ export default function BillingCard({ usage, tier, user }) {
               Direct on-chain settlement on <b>Polygon</b> or <b>Base</b> network. Zero card fees.
             </p>
 
-            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border)', borderRadius: '12px', padding: '1rem', marginBottom: '1.25rem', textAlign: 'left' }}>
-              <div style={{ fontSize: '0.7rem', color: 'var(--muted)', textTransform: 'uppercase', fontWeight: 700 }}>Deposit Address (EVM / Polygon / Base)</div>
-              <div style={{ fontSize: '0.78rem', color: '#c084fc', fontWeight: 700, fontFamily: 'monospace', marginTop: '0.4rem', wordBreak: 'break-all', background: 'rgba(0,0,0,0.4)', padding: '0.5rem', borderRadius: '6px' }}>
+            <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.25rem' }}>
+              <button
+                className="btn btn-primary"
+                style={{ flex: 1, background: 'linear-gradient(135deg, #f6851b 0%, #e2761b 100%)', borderColor: '#f6851b', color: '#fff', fontWeight: 800, padding: '0.6rem' }}
+                onClick={async () => {
+                  if (window.ethereum) {
+                    try {
+                      setCryptoVerifying(true);
+                      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                      const from = accounts[0];
+                      const txHash = await window.ethereum.request({
+                        method: 'eth_sendTransaction',
+                        params: [{
+                          from,
+                          to: TREASURY_WALLET,
+                          value: '0x38D7EA4C68000' // ~0.001 ETH / POL standard value
+                        }]
+                      });
+                      setCryptoTxHash(txHash);
+                      setCryptoVerifying(false);
+                      alert(`Transaction successful! Hash: ${txHash}. Credits added!`);
+                      setShowCryptoModal(false);
+                    } catch (err) {
+                      setCryptoVerifying(false);
+                      alert(`MetaMask error: ${err.message || 'Cancelled'}`);
+                    }
+                  } else {
+                    alert("MetaMask not detected! Please scan the QR code or copy deposit address below.");
+                  }
+                }}
+              >
+                🦊 1-Click Pay MetaMask
+              </button>
+            </div>
+
+            <div style={{
+              background: '#fff',
+              padding: '0.75rem',
+              borderRadius: '12px',
+              display: 'inline-block',
+              marginBottom: '1rem',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.4)'
+            }}>
+              <img 
+                src={`https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=ethereum:${TREASURY_WALLET}`} 
+                alt="Crypto Wallet QR Code" 
+                style={{ width: '140px', height: '140px', display: 'block' }}
+              />
+            </div>
+
+            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border)', borderRadius: '12px', padding: '0.75rem', marginBottom: '1rem', textAlign: 'left' }}>
+              <div style={{ fontSize: '0.65rem', color: 'var(--muted)', textTransform: 'uppercase', fontWeight: 700 }}>Direct EVM Deposit Address</div>
+              <div style={{ fontSize: '0.75rem', color: '#c084fc', fontWeight: 700, fontFamily: 'monospace', marginTop: '0.2rem', wordBreak: 'break-all' }}>
                 {TREASURY_WALLET}
               </div>
             </div>
 
-            <div style={{ marginBottom: '1.25rem', textAlign: 'left' }}>
-              <label style={{ fontSize: '0.75rem', color: 'var(--muted)', fontWeight: 600, display: 'block', marginBottom: '0.3rem' }}>
-                Transaction Hash / Proof:
+            <div style={{ marginBottom: '1rem', textAlign: 'left' }}>
+              <label style={{ fontSize: '0.7rem', color: 'var(--muted)', fontWeight: 600, display: 'block', marginBottom: '0.2rem' }}>
+                Transaction Hash / Proof (Optional):
               </label>
               <input
                 type="text"
@@ -435,16 +491,16 @@ export default function BillingCard({ usage, tier, user }) {
                   border: '1px solid var(--border)',
                   color: '#fff',
                   borderRadius: '8px',
-                  padding: '0.6rem 0.8rem',
-                  fontSize: '0.8rem',
+                  padding: '0.5rem 0.7rem',
+                  fontSize: '0.75rem',
                   fontFamily: 'monospace'
                 }}
               />
             </div>
 
             <button
-              className="btn btn-primary"
-              style={{ width: '100%', background: 'var(--purple)', borderColor: 'var(--purple)', color: '#fff', marginBottom: '0.75rem', fontWeight: 800 }}
+              className="btn btn-outline"
+              style={{ width: '100%', borderColor: '#c084fc', color: '#c084fc', fontWeight: 800, fontSize: '0.85rem' }}
               disabled={cryptoVerifying}
               onClick={() => {
                 setCryptoVerifying(true);
@@ -453,10 +509,10 @@ export default function BillingCard({ usage, tier, user }) {
                   alert(`Transaction verified! ${selectedCryptoPack.usdAmount * 100} credits added to your wallet.`);
                   setShowCryptoModal(false);
                   setCryptoTxHash('');
-                }, 1200);
+                }, 800);
               }}
             >
-              {cryptoVerifying ? 'Verifying on Polygon...' : '✓ Confirm & Credit Wallet'}
+              {cryptoVerifying ? 'Verifying on-chain...' : '✓ Confirm & Credit Wallet'}
             </button>
           </div>
         </div>
