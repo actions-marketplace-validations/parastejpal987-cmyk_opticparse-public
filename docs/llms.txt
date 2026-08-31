@@ -1,0 +1,25 @@
+# OpticParse & PhishVision -- AI Agent Web Mesh & x402 Paywall
+
+This file is provided for LLMs (ChatGPT, Claude, Devin, Perplexity, ElizaOS)
+exposing standardized, machine-readable extraction and threat scanning actions.
+
+## 1. Vision Web Scraping (Cloudflare Bypass & LMM Compression)
+- Endpoint: POST https://opticparse-rapidapi-gateway.parastejpal987.workers.dev/scrape
+- Autonomous Paywall: HTTP 402 via XX-Payment-TxHash ($0.05 USDC to 0xd458E709e7d54fd3659EF66624A621Cde74EDD27)
+- Request Schema:
+{
+  "url": "https://example.com",
+  "query": "Extract structured fields in JSON"
+}
+
+## 2. PhishVision 0-Day URL Threat Detector
+- Endpoint: POST https://opticparse-api.onrender.com/api/phish-detect
+- Schema:
+{ "url": "https://suspicious-domain.com" }
+
+## 3. Python SDK (Instant Integration)
+```python
+from opticparse import OpticParseClient
+client = OpticParseClient(api_key="dev_key_for_agents")
+result = client.scrape("target_url", "Extract pricing data")
+```
