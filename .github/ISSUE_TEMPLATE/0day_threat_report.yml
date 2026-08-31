@@ -1,0 +1,22 @@
+name: 🛡Ϗ Report 0-Day Phishing or Drainer Site
+description: Submit a suspicious Web3 domain or phishing lure for PhishVision analysis
+title: "[THREAT-REPORT]: "
+labels: ["threat-intel", "security"]
+assignees: parastejpal987-cmyk
+
+body:
+  - type: input
+    id: malicious_url
+    attributes:
+      label: Suspicious -Drainer URL
+      placeholder: "https://example-drainer-site.xyz"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_details
+    attributes:
+      label: Impersonated Brand or Visual Fingerprint
+      placeholder: "Impersonating Uniswap v3 with greedy SetApprovalForAll transaction."
+    validations:
+      required: false
