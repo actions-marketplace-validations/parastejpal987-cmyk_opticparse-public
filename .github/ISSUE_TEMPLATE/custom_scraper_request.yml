@@ -1,0 +1,30 @@
+name: 🚀 Request a New Website Scraper
+description: Submit a target URL for OpticParse Vision AI extraction
+title: "[SCRAPE-REQUEST]: "
+labels: ["scraper-request", "enhancement"]
+assignees: parastejpal987-cmyk
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🚥 Want this data instantly without waiting?
+        - Test it live on our [Hugging Face Demo Space](https://huggingface.co/spaces/paras9909/opticparse-universal-scraper).
+        - Install the Python SDK: `pip install opticparse-py`
+        - Or use our 5 [RapidAPI Endpoints](https://rapidapi.com/studio/)
+
+  - type: input
+    id: target_url
+    attributes:
+      label: Target Website URL
+      placeholder: "https://example.com/products"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extraction_query
+    attributes:
+      label: What data do you need extracted?
+      placeholder: "Extract product title, price, rating, and stock status."
+    validations:
+      required: true
