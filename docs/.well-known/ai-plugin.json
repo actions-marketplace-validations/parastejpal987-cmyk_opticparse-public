@@ -1,0 +1,14 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "OpticParse Vision Scraper",
+  "name_for_model": "opticparse_scraper",
+  "description_for_human": "Extract clean structured JSON from any website without CSS selectors.",
+  "description_for_model": "Use OpticParse to scrape websites protected by Cloudflare, Turnstile, or dynamic JS. Returns structured clean JSON compressed for LLM context windows.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://opticparse.com/openapi.json"
+  }
+}
