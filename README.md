@@ -5,17 +5,21 @@
 
   <p>
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
-    <a href="https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark"><img src="https://img.shields.io/badge/Kaggle_Audit-100%25_Verified-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle Benchmark"></a>
-    <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Master_Corpus-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
+    <a href="https://github.com/parastejpal987-cmyk/opticparse-public/stargazers"><img src="https://img.shields.io/github/stars/parastejpal987-cmyk/opticparse-public?style=for-the-badge&color=gold&logo=github" alt="GitHub Stars"></a>
+    <a href="https://huggingface.co/spaces/paras9909/opticparse-universal-scraper"><img src="https://img.shields.io/badge/Hugging_Face-Live_Demo-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Demo"></a>
+    <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
     <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
   </p>
   <p>
+    <a href="https://github.com/sponsors/parastejpal987-cmyk"><img src="https://img.shields.io/badge/Sponsor_Web3-0xd458...DD27-ff69b4?style=flat&logo=ethereum&logoColor=white" alt="Web3 Sponsor"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
-    <img src="https://img.shields.io/badge/Edge_Ingestion-Every_15_Min-brightgreen" alt="Ingestion Cadence">
+    <img src="https://img.shields.io/badge/Autonomous_x402-$0.05_USDC-purple" alt="x402 Paywall">
     <img src="https://img.shields.io/badge/Daily_Velocity-%2B1%2C250_Records%2F24h-blueviolet" alt="Velocity">
     <img src="https://img.shields.io/badge/MCP_Protocol-2024--11--05-orange" alt="MCP Protocol">
   </p>
 </div>
+
+> ⭐ **Support Open Source:** If you find OpticParse or PhishVision useful, please **give us a Star on GitHub**! It helps us maintain free edge scrapers and datasets for everyone.
 
 ---
 
