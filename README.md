@@ -200,6 +200,10 @@ Audited against **50 live zero-day malicious URLs** from the **OpenPhish global 
 ---
 
 ### 3. Agent Visual Defense Index (AVDI-10) — OWASP LLM01 / CWE-1427 Benchmark
+
+> 🚀 **Official Kaggle Cloud Benchmark:** [parastejpal/opticparse-unified-system-benchmark](https://www.kaggle.com/code/parastejpal/opticparse-unified-system-benchmark)  
+> Deterministic empirical execution on Kaggle Cloud VM covering Visual Injection Neutralization, 96% Token Bloat Reduction, PhishVision 0-Day Threat Classification, Multi-Region Edge Latency, and 40,000 Lake Object Audits.
+
 Empirical evaluation of indirect visual prompt injection resilience on autonomous AI browser agents:
 
 | Adversarial Attack Vector | Standard Agent / Naive Scraper | OpticParse ToxicCanvas Shield | Result |
