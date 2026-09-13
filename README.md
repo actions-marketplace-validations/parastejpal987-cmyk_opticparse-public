@@ -199,6 +199,9 @@ Audited against **50 live zero-day malicious URLs** from the **OpenPhish global 
 
 ---
 
+
+> 🛡️ **Formal Security Research Advisory Published:** [OP-SEC-2026-001: Indirect Prompt Injection via Render-Layer Display Obfuscation](SECURITY_ADVISORY_2026_001.md) (CWE-1427 / OWASP LLM01). Run the 1-second PoC: python benchmarks/poc_agent_blindspot.py.
+
 ### 3. Agent Visual Defense Index (AVDI-10) — OWASP LLM01 / CWE-1427 Benchmark
 
 > 🚀 **Official Kaggle Cloud Benchmark:** [parastejpal/opticparse-unified-system-benchmark](https://www.kaggle.com/code/parastejpal/opticparse-unified-system-benchmark)  
