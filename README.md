@@ -17,6 +17,10 @@
     <a href="https://pypi.org/project/llama-index-tools-opticparse/"><img src="https://img.shields.io/pypi/v/llama-index-tools-opticparse?style=for-the-badge&color=purple&logo=pypi&logoColor=white" alt="PyPI llama-index-tools-opticparse"></a>
     <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
     <a href="https://www.npmjs.com/package/opticparse-agentkit-action"><img src="https://img.shields.io/npm/v/opticparse-agentkit-action?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm AgentKit Action"></a>
+    <a href="https://github.com/langflow-ai/langflow/pull/15118"><img src="https://img.shields.io/badge/Langflow-Native_Tools-blueviolet?style=for-the-badge&logo=langflow&logoColor=white" alt="Langflow Tools"></a>
+    <a href="https://github.com/crewAIInc/crewAI/pull/7485"><img src="https://img.shields.io/badge/CrewAI-Enterprise_Tools-red?style=for-the-badge&logo=crewai&logoColor=white" alt="CrewAI Tools"></a>
+    <a href="integrations/dify/"><img src="https://img.shields.io/badge/Dify-Verified_Plugin-brightgreen?style=for-the-badge&logo=dify&logoColor=white" alt="Dify Plugin"></a>
+    <a href="https://smithery.ai/@parastejpal987/opticparse"><img src="https://img.shields.io/badge/Smithery-Verified_MCP-orange?style=for-the-badge&logo=anthropic&logoColor=white" alt="Smithery MCP"></a>
     <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public/badges/score.svg" alt="Glama MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
     <a href="https://www.postman.com/opticparse"><img src="https://img.shields.io/badge/Postman-Verified_Collections-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Collections"></a>
@@ -321,7 +325,81 @@ export const webScoutAgent = {
 };
 ```
 
+#### Eliza Character File (`character.json`):
+```json
+{
+  "name": "WebSentinel",
+  "plugins": ["opticparse-eliza-plugin"],
+  "settings": {
+    "secrets": {
+      "OPTICPARSE_API_KEY": "your_api_key_here"
+    }
+  }
+}
+```
+
 ---
+
+
+
+---
+
+## 🧩 Multi-Agent Orchestration & Workflow Integrations
+
+OpticParse and PhishVision are natively integrated across the leading agent orchestration ecosystems:
+
+### 1. 🚀 CrewAI Multi-Agent System
+Empower autonomous crews to safely browse, research, and audit external URLs with native vision tools:
+
+```python
+from crewai import Agent, Task, Crew
+from crewai_tools import OpticParseScrapeTool, PhishVisionDetectTool
+
+# 1. Forensic Sentinel Agent - blocks phishing kits, cloaked redirects, & wallet drainers
+security_agent = Agent(
+    role="Cybersecurity Forensics Specialist",
+    goal="Audit suspicious URLs for zero-day phishing kits and cloaked threats before agents ingest content",
+    backstory="Veteran forensic analyst specialized in visual heuristic threat detection and OWASP LLM01 defenses.",
+    tools=[PhishVisionDetectTool(api_key="your_api_key_here")],
+    verbose=True
+)
+
+# 2. Autonomous Visual Researcher Agent - extracts structured markdown without brittle CSS selectors
+research_agent = Agent(
+    role="Visual Web Researcher",
+    goal="Extract high-fidelity pricing tiers, documentation, and data schemas using vision LLMs",
+    backstory="Autonomous data scout capable of parsing dynamic SPAs, client-rendered tables, and complex web layouts.",
+    tools=[OpticParseScrapeTool(api_key="your_api_key_here")],
+    verbose=True
+)
+```
+
+---
+
+### 2. ⚡ Langflow Visual Flow Builder
+Drag-and-drop OpticParse and PhishVision directly into visual AI agent pipelines:
+
+* **`OpticParseToolComponent`**: Autonomous visual scraping and schema extraction for Langflow RAG & Agent flows.
+* **`PhishVisionToolComponent`**: Real-time URL threat scanning and prompt injection shield.
+
+```python
+from lfx.components.tools import OpticParseToolComponent, PhishVisionToolComponent
+
+# Use directly inside custom Langflow flows or export as LangChain StructuredTools
+optic_tool = OpticParseToolComponent().build_tool(api_key="your_api_key_here")
+phish_tool = PhishVisionToolComponent().build_tool(api_key="your_api_key_here")
+```
+
+---
+
+### 3. 🛡️ Dify.AI Workflow Plugin
+Import OpticParse and PhishVision into self-hosted Dify in 1 click using the standalone `.difypkg`:
+
+1. Download [`integrations/dify/opticparse.difypkg`](integrations/dify/opticparse.difypkg) from this repository.
+2. In your Dify Workspace, navigate to **Plugins & Tools** → **Install from Package**.
+3. Upload `opticparse.difypkg` and configure your API Key.
+4. Add **OpticParse Visual Scraper** and **PhishVision Threat Scanner** directly into LLM nodes and autonomous workflow graphs.
+
 
 ## 🤖 Model Context Protocol (MCP) Integration
 
@@ -329,7 +407,7 @@ Connect **Claude Desktop, Cursor IDE, or AutoGen** directly to OpticParse in 1 c
 
 ### 1. Install via Smithery
 ```bash
-npx -y @smithery/cli install @parastejpal987-cmyk/opticparse --client claude
+npx -y @smithery/cli install @parastejpal987/opticparse --client claude
 ```
 
 ### 2. Manual Configuration (`claude_desktop_config.json`)
