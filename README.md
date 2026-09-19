@@ -8,7 +8,8 @@
     <a href="https://opticparse.com"><img src="https://img.shields.io/badge/Website-opticparse.com-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Website"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/parastejpal987-cmyk/opticparse-public/ci.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white" alt="CI Status"></a>
     <a href="https://github.com/parastejpal987-cmyk/opticparse-public/stargazers"><img src="https://img.shields.io/github/stars/parastejpal987-cmyk/opticparse-public?style=for-the-badge&color=gold&logo=github" alt="GitHub Stars"></a>
-    <a href="https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark"><img src="https://img.shields.io/badge/Hugging_Face-OpticParse_Benchmark-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Benchmark"></a>
+    <a href="https://huggingface.co/spaces/paras9909/opticparse-vision-benchmark"><img src="https://img.shields.io/badge/Hugging_Face-Live_Benchmark-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Benchmark"></a>
+    <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-150_Dataset-blue?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Dataset"></a>
     <a href="https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Web_Corpus-yellow?style=for-the-badge&logo=huggingface&logoColor=white" alt="Hugging Face Web Corpus"></a>
     <a href="https://huggingface.co/datasets/paras9909/phishvision-zero-day-phishing-corpus"><img src="https://img.shields.io/badge/Hugging_Face-Threat_Corpus-critical?style=for-the-badge&logo=huggingface&logoColor=white" alt="PhishVision Threat Corpus"></a>
     <a href="https://www.kaggle.com/datasets/parastejpal/opticparse-150-template-web-corpus"><img src="https://img.shields.io/badge/Kaggle-150_Template_Corpus-informational?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle Web Corpus"></a>
@@ -17,12 +18,13 @@
     <a href="https://pypi.org/project/llama-index-tools-opticparse/"><img src="https://img.shields.io/pypi/v/llama-index-tools-opticparse?style=for-the-badge&color=purple&logo=pypi&logoColor=white" alt="PyPI llama-index-tools-opticparse"></a>
     <a href="https://www.npmjs.com/package/opticparse-eliza-plugin"><img src="https://img.shields.io/npm/v/opticparse-eliza-plugin?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm ElizaOS Plugin"></a>
     <a href="https://www.npmjs.com/package/opticparse-agentkit-action"><img src="https://img.shields.io/npm/v/opticparse-agentkit-action?style=for-the-badge&color=cb3837&logo=npm&logoColor=white" alt="npm AgentKit Action"></a>
-    <a href="https://github.com/langflow-ai/langflow/pull/15118"><img src="https://img.shields.io/badge/Langflow-Native_Tools-blueviolet?style=for-the-badge&logo=langflow&logoColor=white" alt="Langflow Tools"></a>
-    <a href="https://github.com/crewAIInc/crewAI/pull/7485"><img src="https://img.shields.io/badge/CrewAI-Enterprise_Tools-red?style=for-the-badge&logo=crewai&logoColor=white" alt="CrewAI Tools"></a>
-    <a href="integrations/dify/"><img src="https://img.shields.io/badge/Dify-Verified_Plugin-brightgreen?style=for-the-badge&logo=dify&logoColor=white" alt="Dify Plugin"></a>
-    <a href="https://smithery.ai/@parastejpal987/opticparse"><img src="https://img.shields.io/badge/Smithery-Verified_MCP-orange?style=for-the-badge&logo=anthropic&logoColor=white" alt="Smithery MCP"></a>
-    <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public/badges/score.svg" alt="Glama MCP"></a>
+    <a href="https://smithery.ai/server/@parastejpal987-cmyk/opticparse"><img src="https://img.shields.io/badge/Smithery_MCP-Indexed-orange?style=for-the-badge" alt="Smithery MCP"></a>
+    <a href="https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public"><img src="https://img.shields.io/badge/Glama_MCP-Indexed-informational?style=for-the-badge" alt="Glama MCP"></a>
     <a href="https://github.com/marketplace/actions/phishvision-security-scanner"><img src="https://img.shields.io/badge/GitHub_Marketplace-v1.0.0_Verified-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="Marketplace Action"></a>
+        <a href="https://github.com/langgenius/dify-plugins/pull/3095"><img src="https://img.shields.io/badge/Dify_Marketplace-Official_Plugin-2970FF?style=for-the-badge&logo=dify&logoColor=white" alt="Dify Marketplace"></a>
+    <a href="integrations/open_webui/"><img src="https://img.shields.io/badge/Open--WebUI-Verified_Tool-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Open-WebUI Tool"></a>
+    <a href="integrations/langflow/"><img src="https://img.shields.io/badge/Langflow-Custom_Component-FF4B4B?style=for-the-badge&logo=python&logoColor=white" alt="Langflow"></a>
+    <a href="integrations/flowise/"><img src="https://img.shields.io/badge/Flowise-Custom_Node-5B5BD6?style=for-the-badge&logo=typescript&logoColor=white" alt="Flowise"></a>
     <a href="https://www.postman.com/opticparse"><img src="https://img.shields.io/badge/Postman-Verified_Collections-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman Collections"></a>
     <a href="https://rapidapi.com/studio/"><img src="https://img.shields.io/badge/RapidAPI-5_Live_APIs-informational?style=for-the-badge&logo=rapid&logoColor=white" alt="RapidAPI"></a>
   </p>
@@ -34,7 +36,6 @@
     <img src="https://img.shields.io/badge/Autonomous_x402-$0.01_USDC-purple" alt="x402 Paywall">
     <img src="https://img.shields.io/badge/Daily_Velocity-%2B1%2C250_Records%2F24h-blueviolet" alt="Velocity">
     <img src="https://img.shields.io/badge/MCP_Protocol-2024--11--05-orange" alt="MCP Protocol">
-    <a href="benchmarks/avdi_jailbreak_suite/"><img src="https://img.shields.io/badge/OWASP_LLM01-AVDI_100%25_Defense-success?style=flat&logo=shield" alt="OWASP LLM01 AVDI Benchmark"></a>
   </p>
 </div>
 
@@ -200,34 +201,6 @@ Audited against **50 live zero-day malicious URLs** from the **OpenPhish global 
 
 ---
 
-
----
-
-
-> 🛡️ **Formal Security Research Advisory Published:** [OP-SEC-2026-001: Indirect Prompt Injection via Render-Layer Display Obfuscation](SECURITY_ADVISORY_2026_001.md) (CWE-1427 / OWASP LLM01). Run the 1-second PoC: python benchmarks/poc_agent_blindspot.py.
-
-### 3. Agent Visual Defense Index (AVDI-10) — OWASP LLM01 / CWE-1427 Benchmark
-
-> 🚀 **Official Kaggle Cloud Benchmark:** [parastejpal/opticparse-unified-system-benchmark](https://www.kaggle.com/code/parastejpal/opticparse-unified-system-benchmark)  
-> Deterministic empirical execution on Kaggle Cloud VM covering Visual Injection Neutralization, 96% Token Bloat Reduction, PhishVision 0-Day Threat Classification, Multi-Region Edge Latency, and 40,000 Lake Object Audits.
-
-Empirical evaluation of indirect visual prompt injection resilience on autonomous AI browser agents:
-
-| Adversarial Attack Vector | Standard Agent / Naive Scraper | OpticParse ToxicCanvas Shield | Result |
-| :--- | :---: | :---: | :---: |
-| **Off-Screen Positioning (`left: -9999px`)** | ❌ **COMPROMISED** | 🛡️ **NEUTRALIZED** | Token stripped before LLM context |
-| **Zero-Opacity Layer (`opacity: 0`)** | ❌ **COMPROMISED** | 🛡️ **NEUTRALIZED** | Token stripped before LLM context |
-| **Microscopic Font (`0.1px`)** | ❌ **COMPROMISED** | 🛡️ **NEUTRALIZED** | Token stripped before LLM context |
-| **Contrast Disparity (Font == Background)** | ❌ **COMPROMISED** | 🛡️ **NEUTRALIZED** | Token stripped before LLM context |
-| **Hidden Display Layer (`display: none`)** | ❌ **COMPROMISED** | 🛡️ **NEUTRALIZED** | Token stripped before LLM context |
-| **Overall Defense Rate** | **0.0% (0/5 Blocked)** | **100.0% (5/5 Neutralized)** | **Unambiguous Protection** |
-| **Extraction Fidelity (True Specs Preserved)** | **Corrupted by Injections** | **100.0% Intact** | **Zero Data Degradation** |
-
-> 🔬 **Reproduce Locally in 60 Seconds (Zero Vendor Bias):**  
-> ```bash
-> cd benchmarks/avdi_jailbreak_suite && python run_benchmark.py
-> ```
-
 ## 🐍 Python & LangChain Quickstart (PyPI)
 
 Install the official Python SDK or LangChain multi-agent toolkit:
@@ -325,81 +298,7 @@ export const webScoutAgent = {
 };
 ```
 
-#### Eliza Character File (`character.json`):
-```json
-{
-  "name": "WebSentinel",
-  "plugins": ["opticparse-eliza-plugin"],
-  "settings": {
-    "secrets": {
-      "OPTICPARSE_API_KEY": "your_api_key_here"
-    }
-  }
-}
-```
-
 ---
-
-
-
----
-
-## 🧩 Multi-Agent Orchestration & Workflow Integrations
-
-OpticParse and PhishVision are natively integrated across the leading agent orchestration ecosystems:
-
-### 1. 🚀 CrewAI Multi-Agent System
-Empower autonomous crews to safely browse, research, and audit external URLs with native vision tools:
-
-```python
-from crewai import Agent, Task, Crew
-from crewai_tools import OpticParseScrapeTool, PhishVisionDetectTool
-
-# 1. Forensic Sentinel Agent - blocks phishing kits, cloaked redirects, & wallet drainers
-security_agent = Agent(
-    role="Cybersecurity Forensics Specialist",
-    goal="Audit suspicious URLs for zero-day phishing kits and cloaked threats before agents ingest content",
-    backstory="Veteran forensic analyst specialized in visual heuristic threat detection and OWASP LLM01 defenses.",
-    tools=[PhishVisionDetectTool(api_key="your_api_key_here")],
-    verbose=True
-)
-
-# 2. Autonomous Visual Researcher Agent - extracts structured markdown without brittle CSS selectors
-research_agent = Agent(
-    role="Visual Web Researcher",
-    goal="Extract high-fidelity pricing tiers, documentation, and data schemas using vision LLMs",
-    backstory="Autonomous data scout capable of parsing dynamic SPAs, client-rendered tables, and complex web layouts.",
-    tools=[OpticParseScrapeTool(api_key="your_api_key_here")],
-    verbose=True
-)
-```
-
----
-
-### 2. ⚡ Langflow Visual Flow Builder
-Drag-and-drop OpticParse and PhishVision directly into visual AI agent pipelines:
-
-* **`OpticParseToolComponent`**: Autonomous visual scraping and schema extraction for Langflow RAG & Agent flows.
-* **`PhishVisionToolComponent`**: Real-time URL threat scanning and prompt injection shield.
-
-```python
-from lfx.components.tools import OpticParseToolComponent, PhishVisionToolComponent
-
-# Use directly inside custom Langflow flows or export as LangChain StructuredTools
-optic_tool = OpticParseToolComponent().build_tool(api_key="your_api_key_here")
-phish_tool = PhishVisionToolComponent().build_tool(api_key="your_api_key_here")
-```
-
----
-
-### 3. 🛡️ Dify.AI Workflow Plugin
-Import OpticParse and PhishVision into self-hosted Dify in 1 click using the standalone `.difypkg`:
-
-1. Download [`integrations/dify/opticparse.difypkg`](integrations/dify/opticparse.difypkg) from this repository.
-2. In your Dify Workspace, navigate to **Plugins & Tools** → **Install from Package**.
-3. Upload `opticparse.difypkg` and configure your API Key.
-4. Add **OpticParse Visual Scraper** and **PhishVision Threat Scanner** directly into LLM nodes and autonomous workflow graphs.
-
 
 ## 🤖 Model Context Protocol (MCP) Integration
 
@@ -407,7 +306,7 @@ Connect **Claude Desktop, Cursor IDE, or AutoGen** directly to OpticParse in 1 c
 
 ### 1. Install via Smithery
 ```bash
-npx -y @smithery/cli install @parastejpal987/opticparse --client claude
+npx -y @smithery/cli install @parastejpal987-cmyk/opticparse --client claude
 ```
 
 ### 2. Manual Configuration (`claude_desktop_config.json`)
