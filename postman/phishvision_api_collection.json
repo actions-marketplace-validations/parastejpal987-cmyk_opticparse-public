@@ -1,0 +1,154 @@
+{
+  "info": {
+    "_postman_id": "5df181a1-a8f6-4083-9ebb-4140236270c9",
+    "name": "PhishVision \u2014 Real-Time AI Zero-Day Threat Shield",
+    "description": "### PhishVision & Agent-Guard - Real-Time Autonomous Threat Shield\n\nPhishVision & Agent-Guard audit suspicious dApps, smart contract drainers, and visual prompt injections in <1.2 seconds.\n\n### Features:\n- **Agent-Guard Pre-Flight Oracle:** In-line safety wrapper before autonomous agents (ElizaOS, AgentKit) sign transactions.\n- **ToxicCanvas Firewall:** Blocks visual prompt injections cloaked in invisible SVG layers.\n- **Zero-Day Catch:** Detects wallet drainers before VirusTotal or Google SafeBrowsing.\n\n### Settlement:\n- Treasury: 0xd458E709e7d54fd3659EF66624A621Cde74EDD27 (Base / Polygon / Arbitrum)\n- Pay-per-Audit: .05 USDC per pre-flight verification.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-08-30T18:42:26.000Z",
+    "updatedAt": "2026-09-07T03:52:25.000Z",
+    "lastUpdatedBy": "56296985",
+    "uid": "56296985-5df181a1-a8f6-4083-9ebb-4140236270c9"
+  },
+  "item": [
+    {
+      "name": "1. Scan URL (Edge 0-Day Scanner)",
+      "id": "d0e854fd-d209-49c0-afd7-dd538c5dc4c9",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer op_live_postman_trial"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://suspicious-crypto-airdrop.xyz\"\n}"
+        },
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/phishvision/scan",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "phishvision",
+            "scan"
+          ]
+        },
+        "description": "Scan any URL for zero-day phishing, credential harvesting, or crypto wallet drainers."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:25.000Z",
+      "updatedAt": "2026-09-07T03:52:25.000Z",
+      "uid": "56296985-d0e854fd-d209-49c0-afd7-dd538c5dc4c9"
+    },
+    {
+      "name": "2. Security Badge (SVG)",
+      "id": "df26907c-b8b4-4f92-8024-5b310af6c874",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/api/badge/phishvision?status=safe",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "api",
+            "badge",
+            "phishvision"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "safe"
+            }
+          ]
+        },
+        "description": "Returns dynamic 0-Day Safe SVG badge for embedding in README or security compliance pages."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:25.000Z",
+      "updatedAt": "2026-09-07T03:52:25.000Z",
+      "uid": "56296985-df26907c-b8b4-4f92-8024-5b310af6c874"
+    },
+    {
+      "name": "3. PhishVision Node Sentinel Health",
+      "id": "d66f7119-65f9-4aaf-86f5-8287c5d89f98",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://opticparse-1opticparse-node-sg.onrender.com/health",
+          "protocol": "https",
+          "host": [
+            "opticparse-1opticparse-node-sg",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "health"
+          ]
+        },
+        "description": "Audit status of the dedicated Node.js PhishVision sentinel."
+      },
+      "response": [],
+      "createdAt": "2026-09-07T03:52:25.000Z",
+      "updatedAt": "2026-09-07T03:52:25.000Z",
+      "uid": "56296985-d66f7119-65f9-4aaf-86f5-8287c5d89f98"
+    },
+    {
+      "name": "4. Agent-Guard Pre-Flight Tx Oracle",
+      "id": "agent-guard-preflight-001",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer op_live_postman_trial"
+          },
+          {
+            "key": "X-Agent-Framework",
+            "value": "ElizaOS-CoinbaseAgentKit"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://app.uniswap.org\",\n  \"action\": \"pre_flight_audit\"\n}"
+        },
+        "url": {
+          "raw": "https://opticparse-mcp-portal.parastejpal987.workers.dev/phishvision/scan",
+          "protocol": "https",
+          "host": [
+            "opticparse-mcp-portal",
+            "parastejpal987",
+            "workers",
+            "dev"
+          ],
+          "path": [
+            "phishvision",
+            "scan"
+          ]
+        },
+        "description": "Zero-trust pre-flight audit for autonomous agent swarms (ElizaOS, AgentKit) before executing on-chain swaps or interacting with untrusted dApps."
+      },
+      "response": []
+    }
+  ]
+}
