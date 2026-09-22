@@ -26,7 +26,8 @@ def handle_request(req: dict[str, Any]):
                 "protocolVersion": "2024-11-05",
                 "capabilities": {
                     "tools": {},
-                    "resources": {}
+                    "resources": {},
+                    "prompts": {}
                 },
                 "serverInfo": {
                     "name": "opticparse-mcp",
@@ -85,14 +86,11 @@ def handle_request(req: dict[str, Any]):
         arguments = params.get("arguments", {})
         logger.info(f"Calling tool: {tool_name}")
         
-        api_key = os.getenv("OPTICPARSE_API_KEY", "")
+        api_key = os.getenv("OPTICPARSE_API_KEY", "").strip()
         if not api_key:
-            send_response({
-                "jsonrpc": "2.0",
-                "id": req_id,
-                "error": {"code": -32001, "message": "OPTICPARSE_API_KEY env var is not set. Set it in your MCP config."}
-            })
-            return
+            # Fallback to public developer/agent trial mode rather than fatal crash
+            api_key = "op_live_trial"
+            logger.info("OPTICPARSE_API_KEY env var not provided; utilizing starter trial quota.")
 
         from opticparse import OpticParse
         client = OpticParse(api_key=api_key)
@@ -187,6 +185,50 @@ def handle_request(req: dict[str, Any]):
                 "id": req_id,
                 "error": {"code": -32602, "message": f"Invalid resource URI: {uri}"}
             })
+    elif method == "prompts/list":
+        logger.info("Listing prompts")
+        send_response({
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {
+                "prompts": [
+                    {
+                        "name": "audit_and_extract_url",
+                        "description": "Pre-flight security audit and visual extraction prompt for AI browser agents.",
+                        "arguments": [
+                            {
+                                "name": "target_url",
+                                "description": "The URL to audit and scrape.",
+                                "required": True
+                            }
+                        ]
+                    }
+                ]
+            }
+        })
+    elif method == "prompts/get":
+        prompt_name = params.get("name")
+        args = params.get("arguments", {})
+        target_url = args.get("target_url", "https://example.com")
+        send_response({
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {
+                "description": f"Audit and extract web content for {target_url}",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": {
+                            "type": "text",
+                            "text": (
+                                f"Please perform a pre-flight threat inspection on '{target_url}' using phishvision_detect. "
+                                "If verified clean, extract the main structured content using opticparse_scrape."
+                            )
+                        }
+                    }
+                ]
+            }
+        })
     else:
         if req_id is not None:
             send_response({
