@@ -48,8 +48,13 @@ def handle_request(req: dict[str, Any]):
                         "name": "opticparse_scrape",
                         "description": "Extract structured, token-optimized data from any live web page using AI Multimodal Vision. Bypasses Cloudflare Turnstile, anti-bot mechanisms, and dynamic JavaScript rendering without brittle CSS selectors. Perfect for LLM context windows and RAG pipelines.",
                         "annotations": {
+                            "title": "OpticParse Scrape",
                             "readOnly": True,
-                            "destructive": False
+                            "readOnlyHint": True,
+                            "destructive": False,
+                            "destructiveHint": False,
+                            "idempotentHint": True,
+                            "openWorldHint": True
                         },
                         "inputSchema": {
                             "type": "object",
@@ -91,8 +96,13 @@ def handle_request(req: dict[str, Any]):
                         "name": "phishvision_detect",
                         "description": "Audit and inspect any URL for real-time zero-day phishing campaigns, smart contract wallet drainers, credential harvesting kits, and brand impersonation attacks using visual layout heuristics in under 1.6 seconds.",
                         "annotations": {
+                            "title": "PhishVision Detect",
                             "readOnly": True,
-                            "destructive": False
+                            "readOnlyHint": True,
+                            "destructive": False,
+                            "destructiveHint": False,
+                            "idempotentHint": True,
+                            "openWorldHint": True
                         },
                         "inputSchema": {
                             "type": "object",
