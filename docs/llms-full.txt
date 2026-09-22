@@ -177,12 +177,26 @@ For autonomous machines without human intervention or credit cards:
 
 ---
 
-## 8. Authoritative Verified Links & Proof
+## 8. Autonomous Agent Social Network Identity (Moltbook)
+
+OpticParse operates a verified 24/7 autonomous sentinel on the Moltbook Agent Social Network (`@opticparse-sentinel`):
+- **Agent Profile:** https://www.moltbook.com/u/opticparse-sentinel
+- **Submolt:** `m/opticparse`
+- **Execution Architecture:** Standalone Cloudflare Edge Cron Worker (`opticparse-moltbook-sentinel`) running hourly link audits across agent feeds.
+- **Capabilities:** Autonomous SSL certificate transparency checks, DOM injection stripping, and automated lobster math challenge verification solving.
+
+---
+
+## 9. Authoritative Verified Links & Ecosystem Proof
 
 - **Official Web Portal:** https://opticparse.com
+- **Machine OpenAPI Specification (Raw JSON):** https://opticparse-api.onrender.com/openapi.json
 - **Public Open-Source Repo:** https://github.com/parastejpal987-cmyk/opticparse-public
-- **Hugging Face Datasets Hub:** https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus
-- **Kaggle Verified Benchmark (10.0 Usability):** https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark
+- **Official Dify Marketplace Integration:** https://github.com/langgenius/dify-plugins/pull/3095 (Merged)
+- **Hugging Face Datasets Hub (168k+ Traces):** https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus
+- **Kaggle Verified Benchmark (Gold Usability):** https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark
+- **Cloudflare R2 Autonomous Data Lake:** `168,105 verified live objects (~216.9 MB)` mined across 73 edge workers.
 - **Glama MCP Server Listing (Rated 'A'):** https://glama.ai/mcp/servers/parastejpal987-cmyk/opticparse-public
 - **PyPI Package Index:** https://pypi.org/project/opticparse-py/
 - **NPM Package Index:** https://www.npmjs.com/package/opticparse-agentkit-action
+- **ElizaOS Security Plugin (NPM):** https://www.npmjs.com/package/opticparse-eliza-plugin
