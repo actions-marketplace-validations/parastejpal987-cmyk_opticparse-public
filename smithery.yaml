@@ -4,8 +4,13 @@ name: "opticparse"
 displayName: "OpticParse & PhishVision"
 description: "AI Multimodal Web Scraping & Zero-Day Threat Sentinel for Autonomous Agents. Zero-CSS visual extraction with prompt-injection and phishing protection."
 icon: "https://opticparse.com/assets/opticparse-demo.svg"
+iconUrl: "https://opticparse.com/assets/opticparse-demo.svg"
 homepage: "https://opticparse.com"
 repository: "https://github.com/parastejpal987-cmyk/opticparse-public"
+
+startCommand:
+  type: "http"
+  url: "https://opticparse-mcp-portal.parastejpal987.workers.dev"
 
 mcpServers:
   opticparse:
@@ -15,3 +20,4 @@ mcpServers:
       - "mcp_server"
     env:
       OPTICPARSE_API_KEY: ""
+
