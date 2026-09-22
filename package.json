@@ -1,0 +1,15 @@
+{
+  "name": "opticparse",
+  "version": "1.0.3",
+  "description": "AI Multimodal Web Scraping & Zero-Day Threat Sentinel for Autonomous Agents.",
+  "homepage": "https://opticparse.com",
+  "icon": "https://opticparse.com/assets/opticparse-demo.svg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parastejpal987-cmyk/opticparse-public.git"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}
