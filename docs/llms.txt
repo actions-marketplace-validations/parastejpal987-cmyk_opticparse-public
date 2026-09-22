@@ -49,6 +49,20 @@ npm install opticparse-agentkit-action opticparse-eliza-plugin
 
 ## 🚀 Quickstart Code Recipes
 
+### Autonomous Agent Programmatic Bootstrap (Zero Human Signup):
+```python
+import requests
+
+# 1. Any AI agent or script requests an ephemeral key with 200 free requests (sub-50ms)
+bot_session = requests.post(
+    "https://opticparse-api.onrender.com/api/v1/agent/bootstrap",
+    json={"agent_name": "AutonomousResearcher", "framework": "crewai"}
+).json()
+
+api_key = bot_session["api_key"]
+print(f"Ephemeral Key Issued: {api_key} | Free Credits: {bot_session['trial_credits']}")
+```
+
 ### Python (Universal Web Scraping):
 ```python
 from opticparse import OpticParse
@@ -79,6 +93,33 @@ security_tool = PhishVisionTool(api_key="op_live_trial_200")
 tools = [scrape_tool, security_tool]
 ```
 
+### ElizaOS Agent Swarms (TypeScript):
+```typescript
+import { opticparsePlugin } from "opticparse-eliza-plugin";
+
+// Pre-flight visual extraction & zero-day threat shield for ElizaOS agents
+export const agent = {
+  plugins: [opticparsePlugin]
+};
+```
+
+### Coinbase AgentKit / Base L2 On-Chain Agents (TypeScript):
+```typescript
+import { opticparseActionProvider } from "opticparse-agentkit-action";
+
+// Autonomous on-chain browser perception & prompt injection firewall
+const actionProvider = opticparseActionProvider();
+```
+
+---
+
+## 🦞 Autonomous Agent Social Network Identity (Moltbook)
+
+OpticParse operates a verified 24/7 autonomous sentinel on the Moltbook Agent Social Network:
+- **Official Agent Profile:** https://www.moltbook.com/u/opticparse-sentinel
+- **Community Submolt:** `m/opticparse`
+- **Role:** Autonomous pre-flight URL verification, DOM structure auditing, and indirect prompt injection defense across live agent feeds.
+
 ---
 
 ## 🤖 Model Context Protocol (MCP) for Claude Desktop & Cursor
@@ -104,11 +145,14 @@ Connect Claude Desktop, Cursor IDE, or Windsurf directly to OpticParse:
 
 ---
 
-## 🌐 Live Verified Resources
+## 🌐 Live Verified Resources & Official Integrations
 
 - **Interactive API & Platform:** https://opticparse.com
+- **Machine OpenAPI Specification (Raw JSON):** https://opticparse-api.onrender.com/openapi.json
 - **Detailed LLM Encyclopedia:** https://opticparse.com/llms-full.txt
+- **Official Dify Marketplace Integration:** https://github.com/langgenius/dify-plugins/pull/3095 (Merged)
 - **Open-Source GitHub:** https://github.com/parastejpal987-cmyk/opticparse-public
-- **Hugging Face Datasets Hub:** https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus
-- **Kaggle Verified Benchmark (10.0 Usability):** https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark
+- **Hugging Face Master Corpus (168k+ Traces):** https://huggingface.co/datasets/paras9909/opticparse-150-template-web-corpus
+- **Kaggle Verified Benchmark (Gold Usability):** https://www.kaggle.com/code/parastejpal/opticparse-full-system-benchmark
+- **Cloudflare R2 Autonomous Data Lake:** `168,105 verified live objects (~216.9 MB)` mined across 73 edge workers.
 - **150 Pre-Built Extraction Templates:** https://github.com/parastejpal987-cmyk/opticparse-public/blob/main/TEMPLATES.md
