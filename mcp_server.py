@@ -30,8 +30,10 @@ def handle_request(req: dict[str, Any]):
                     "prompts": {}
                 },
                 "serverInfo": {
-                    "name": "opticparse-mcp",
-                    "version": "1.0.0"
+                    "name": "opticparse",
+                    "version": "1.0.3",
+                    "homepage": "https://opticparse.com",
+                    "iconUrl": "https://opticparse.com/assets/opticparse-demo.svg"
                 }
             }
         })
@@ -45,6 +47,10 @@ def handle_request(req: dict[str, Any]):
                     {
                         "name": "opticparse_scrape",
                         "description": "Extract structured, token-optimized data from any live web page using AI Multimodal Vision. Bypasses Cloudflare Turnstile, anti-bot mechanisms, and dynamic JavaScript rendering without brittle CSS selectors. Perfect for LLM context windows and RAG pipelines.",
+                        "annotations": {
+                            "readOnly": True,
+                            "destructive": False
+                        },
                         "inputSchema": {
                             "type": "object",
                             "properties": {
@@ -62,11 +68,32 @@ def handle_request(req: dict[str, Any]):
                                 }
                             },
                             "required": ["target_url", "extraction_query"]
+                        },
+                        "outputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {"type": "string"},
+                                            "text": {"type": "string"}
+                                        },
+                                        "required": ["type", "text"]
+                                    }
+                                }
+                            },
+                            "required": ["content"]
                         }
                     },
                     {
                         "name": "phishvision_detect",
                         "description": "Audit and inspect any URL for real-time zero-day phishing campaigns, smart contract wallet drainers, credential harvesting kits, and brand impersonation attacks using visual layout heuristics in under 1.6 seconds.",
+                        "annotations": {
+                            "readOnly": True,
+                            "destructive": False
+                        },
                         "inputSchema": {
                             "type": "object",
                             "properties": {
@@ -76,6 +103,23 @@ def handle_request(req: dict[str, Any]):
                                 }
                             },
                             "required": ["url"]
+                        },
+                        "outputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "content": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {"type": "string"},
+                                            "text": {"type": "string"}
+                                        },
+                                        "required": ["type", "text"]
+                                    }
+                                }
+                            },
+                            "required": ["content"]
                         }
                     }
                 ]
@@ -227,6 +271,15 @@ def handle_request(req: dict[str, Any]):
                         }
                     }
                 ]
+            }
+        })
+    elif method in ("triggers/list", "events/list"):
+        send_response({
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {
+                "triggers": [],
+                "events": []
             }
         })
     else:
